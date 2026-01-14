@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Samengestelde rente calculator (spaargroei berekenen)</title>
+  <meta name="description" content="Bereken eenvoudig je spaargroei met samengestelde rente. Zie wat rente-op-rente doet over meerdere jaren." />
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div>
+        <h1>Samengestelde rente calculator</h1>
+        <p>Samengestelde rente calculator: Bereken het eindbedrag op basis van startbedrag, maandelijkse inleg, rente en looptijd. Indicatief en geen advies.</p>
+        <div style="margin-top:10px" class="nav">
+          <span class="badge">Zoekintentie: <strong>“samengestelde rente calculator”</strong></span>
+          <span class="badge">Valuta: <strong>EUR</strong></span>
+        </div>
+      </div>
+      <div class="nav">
+        <a class="badge" href="../index.html">Home</a>
+        <a class="badge" href="../disclaimer.html">Disclaimer</a>
+        <a class="badge" href="../cookie-policy.html">Cookie policy</a>
+        <a class="badge" href="#" data-action="open-consent">Cookie voorkeuren</a>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h2>Calculator <span class="badge">MVP</span></h2>
+        <div class="content">
+          <form id="calcForm" novalidate>
+            <div class="row">
+              <div>
+                <label for="start">Startbedrag (€)</label>
+                <input id="start" type="number" min="0" step="0.01" value="1000" />
+              </div>
+              <div>
+                <label for="monthly">Maandelijkse inleg (€)</label>
+                <input id="monthly" type="number" min="0" step="0.01" value="100" />
+              </div>
+            </div>
+
+            <div class="row">
+              <div>
+                <label for="rate">Jaarlijkse rente (%)</label>
+                <input id="rate" type="number" min="0" step="0.01" value="5" />
+              </div>
+              <div>
+                <label for="years">Looptijd (jaren)</label>
+                <input id="years" type="number" min="0" step="1" value="10" />
+              </div>
+            </div>
+
+            <div class="actions">
+              <button class="primary" type="submit">Bereken</button>
+              <button type="button" id="resetBtn">Reset</button>
+            </div>
+          </form>
+
+          <div class="result" id="result" aria-live="polite">
+            <strong>Resultaat</strong>
+            <div class="muted" id="resultText">Vul waarden in en klik op “Bereken”.</div>
+          </div>
+
+          <div class="hr"></div>
+          <p class="small">
+            Rekenmodel: maandelijkse storting, maandrente = (jaar% / 12). Uitkomst is indicatief.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Uitleg <span class="badge">300–500 woorden</span></h2>
+        <div class="content">
+          <p class="small">
+            Met samengestelde rente groeit je vermogen doordat je rente ontvangt op je oorspronkelijke inleg én op eerder ontvangen rente.
+            Deze calculator helpt je snel inschatten wat een startbedrag en maandelijkse inleg kunnen opleveren bij een constante rente en looptijd.
+          </p>
+          <p class="small">
+            Let op: in de praktijk kunnen rendementen fluctueren en kunnen kosten, belastingen of voorwaarden van invloed zijn. Gebruik deze uitkomst
+            als indicatie en controleer belangrijke bedragen via officiële bronnen.
+          </p>
+
+          <div class="hr"></div>
+
+          <h2 style="padding:0; border:0; margin:0 0 6px; font-size:14px;">Voorbeelden</h2>
+          <ul class="small">
+            <li>Start €1.000, inleg €100/maand, 5% rente, 10 jaar → indicatieve eindwaarde.</li>
+            <li><a href="noodbuffer-calculator.html">Noodbuffer calculator</a></li>
+            <li><a href="uurtarief-calculator.html">Uurtarief calculator (ZZP)</a></li>
+            <li><a href="budget-planner-calculator.html">Budget planner (50/30/20)</a></li>
+            <li><a href="huur-vs-koop-calculator.html">Huur vs koop calculator</a></li>
+            <li><a href="auto-maandkosten-calculator.html">Auto maandkosten calculator</a></li>
+            <li>Geen maandinleg? Zet “Maandelijkse inleg” op €0.</li>
+          </ul>
+
+          <div class="hr"></div>
+
+          <div class="faq">
+            <h2 style="padding:0; border:0; margin:0 0 6px; font-size:14px;">FAQ</h2>
+            <details>
+              <summary>Is dit financieel advies?</summary>
+              <div class="small" style="margin-top:8px;">Nee. Dit is een indicatieve rekenhulp. Zie de disclaimer.</div>
+            </details>
+            <details>
+              <summary>Hoe wordt de rente berekend?</summary>
+              <div class="small" style="margin-top:8px;">We gebruiken maandelijkse samengestelde rente op basis van het jaarpercentage.</div>
+            </details>
+            <details>
+              <summary>Houdt dit rekening met belasting en kosten?</summary>
+              <div class="small" style="margin-top:8px;">Nee. Je kunt later extra velden toevoegen (bijv. kosten % of box 3 schatting).</div>
+            </details>
+          </div>
+
+          <div class="hr"></div>
+          <p class="small"><strong>Related calculators</strong></p>
+          <ul class="small">
+            <li><a href="#">Spaarrente calculator (placeholder)</a></li>
+            <li><a href="#">Inflatie calculator (placeholder)</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="hr"></div>
+<div class="footer">
+  <div class="nav" style="justify-content:flex-start;">
+    <a class="badge" href="../about.html">Over</a>
+    <a class="badge" href="../privacy.html">Privacy</a>
+    <a class="badge" href="../cookie-policy.html">Cookie policy</a>
+    <a class="badge" href="../terms.html">Voorwaarden</a>
+    <a class="badge" href="../contact.html">Contact</a>
+    <a class="badge" href="#" data-action="open-consent">Cookie voorkeuren</a>
+  </div>
+  <div style="margin-top:10px;">
+    <strong>Geen financieel advies.</strong> Indicatieve rekenhulp. Contact: <strong>vul-in@jouwdomein.nl</strong>.
+  </div>
+</div>
+  </div>
+</div>
+  </div>
+
+  <!-- Consent modal shared component -->
+  <div class="consent-modal" role="dialog" aria-label="Cookie voorkeuren">
+    <div class="consent-card" role="document">
+      <div class="consent-head">
+        <div>
+          <h3>Cookie voorkeuren</h3>
+          <p>We gebruiken noodzakelijke opslag voor basisfunctionaliteit. Analytics en advertenties zijn optioneel.</p>
+          <div class="linkrow">
+            <a href="../privacy.html">Privacy</a>
+            <a href="../cookie-policy.html">Cookie policy</a>
+          </div>
+        </div>
+        <div class="nav">
+          <span class="badge">EU</span>
+        </div>
+      </div>
+      <div class="consent-body">
+        <div class="consent-grid">
+          <div class="consent-item">
+            <h4>Noodzakelijk</h4>
+            <p>Vereist om de site te laten werken en je keuze te onthouden.</p>
+            <div class="switch">
+              <label>Altijd aan</label>
+              <div class="toggle disabled"><span class="knob" style="transform:translateX(20px); background: rgba(61,220,151,.95)"></span></div>
+            </div>
+          </div>
+          <div class="consent-item">
+            <h4>Analytics</h4>
+            <p>Helpt ons begrijpen hoe de site wordt gebruikt (optioneel).</p>
+            <div class="switch">
+              <label for="consentAnalytics">Toestaan</label>
+              <div class="toggle">
+                <input id="consentAnalytics" type="checkbox" />
+                <span class="knob"></span>
+              </div>
+            </div>
+          </div>
+          <div class="consent-item">
+            <h4>Advertenties</h4>
+            <p>Toon advertenties (bijv. Google AdSense). Kan cookies gebruiken (optioneel).</p>
+            <div class="switch">
+              <label for="consentAds">Toestaan</label>
+              <div class="toggle">
+                <input id="consentAds" type="checkbox" />
+                <span class="knob"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="consent-foot">
+        <button type="button" data-action="reject-all">Weigeren</button>
+        <button type="button" data-action="accept-all" class="primary">Alles accepteren</button>
+        <button type="button" data-action="save">Opslaan</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/script.js"></script>
+  <script>
+    // Page-specific calculator logic (simple + readable)
+    (function(){
+      const form = document.getElementById("calcForm");
+      const resetBtn = document.getElementById("resetBtn");
+      const resultText = document.getElementById("resultText");
+
+      function num(id){
+        const v = parseFloat(document.getElementById(id).value);
+        return Number.isFinite(v) ? v : 0;
+      }
+
+      function calcCompound(start, monthly, annualRatePct, years){
+        const months = Math.max(0, Math.round(years * 12));
+        const r = Math.max(0, annualRatePct) / 100 / 12;
+
+        let balance = Math.max(0, start);
+        let totalContrib = Math.max(0, start);
+
+        for(let i=0; i<months; i++){
+          // interest
+          balance = balance * (1 + r);
+          // contribution at end of month
+          balance += Math.max(0, monthly);
+          totalContrib += Math.max(0, monthly);
+        }
+
+        const totalInterest = balance - totalContrib;
+        return { balance, totalContrib, totalInterest, months };
+      }
+
+      function render(res){
+        const eur = window.FC.formatEUR;
+        resultText.innerHTML = `
+          Eindbedrag: <strong>${eur(res.balance)}</strong><br/>
+          Totale inleg: <strong>${eur(res.totalContrib)}</strong><br/>
+          Totale rente (indicatief): <strong>${eur(res.totalInterest)}</strong><br/>
+          <span class="muted">Periode: ${res.months} maanden</span>
+        `;
+      }
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const start = num("start");
+        const monthly = num("monthly");
+        const rate = num("rate");
+        const years = num("years");
+
+        const res = calcCompound(start, monthly, rate, years);
+        render(res);
+      });
+
+      resetBtn.addEventListener("click", () => {
+        document.getElementById("start").value = 1000;
+        document.getElementById("monthly").value = 100;
+        document.getElementById("rate").value = 5;
+        document.getElementById("years").value = 10;
+        resultText.textContent = 'Vul waarden in en klik op “Bereken”.';
+      });
+    })();
+  </script>
+</body>
+</html>

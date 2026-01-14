@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Finance Calculators</title>
+  <meta name="description" content="Contactpagina voor Finance Calculators." />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div>
+        <h1>Contact</h1>
+        <p>Korte contactoptie (EU/AdSense-compliance). Zet hier een e-mailadres of een simpel formulier (optioneel).</p>
+      </div>
+      <div class="nav">
+        <a class="badge" href="index.html">Home</a>
+        <a class="badge" href="about.html">Over</a>
+        <a class="badge" href="terms.html">Voorwaarden</a>
+        <a class="badge" href="cookie-policy.html">Cookie policy</a>
+        <a class="badge" href="#" data-action="open-consent">Cookie voorkeuren</a>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px;">
+      <h2>Contactgegevens <span class="badge">Template</span></h2>
+      <div class="content">
+        <p class="small">
+          E-mail: <strong>vul-in@jouwdomein.nl</strong><br/>
+          (Optioneel) Doel: privacy vragen en algemene feedback. Geen supportverplichtingen.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Consent modal shared component -->
+  <div class="consent-modal" role="dialog" aria-label="Cookie voorkeuren">
+    <div class="consent-card" role="document">
+      <div class="consent-head">
+        <div>
+          <h3>Cookie voorkeuren</h3>
+          <p>We gebruiken noodzakelijke opslag voor basisfunctionaliteit. Analytics en advertenties zijn optioneel.</p>
+          <div class="linkrow">
+            <a href="privacy.html">Privacy</a>
+            <a href="cookie-policy.html">Cookie policy</a>
+          </div>
+        </div>
+        <div class="nav">
+          <span class="badge">EU</span>
+        </div>
+      </div>
+      <div class="consent-body">
+        <div class="consent-grid">
+          <div class="consent-item">
+            <h4>Noodzakelijk</h4>
+            <p>Vereist om de site te laten werken en je keuze te onthouden.</p>
+            <div class="switch">
+              <label>Altijd aan</label>
+              <div class="toggle disabled"><span class="knob" style="transform:translateX(20px); background: rgba(61,220,151,.95)"></span></div>
+            </div>
+          </div>
+          <div class="consent-item">
+            <h4>Analytics</h4>
+            <p>Helpt ons begrijpen hoe de site wordt gebruikt (optioneel).</p>
+            <div class="switch">
+              <label for="consentAnalytics">Toestaan</label>
+              <div class="toggle">
+                <input id="consentAnalytics" type="checkbox" />
+                <span class="knob"></span>
+              </div>
+            </div>
+          </div>
+          <div class="consent-item">
+            <h4>Advertenties</h4>
+            <p>Toon advertenties (bijv. Google AdSense). Kan cookies gebruiken (optioneel).</p>
+            <div class="switch">
+              <label for="consentAds">Toestaan</label>
+              <div class="toggle">
+                <input id="consentAds" type="checkbox" />
+                <span class="knob"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="consent-foot">
+        <button type="button" data-action="reject-all">Weigeren</button>
+        <button type="button" data-action="accept-all" class="primary">Alles accepteren</button>
+        <button type="button" data-action="save">Opslaan</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>

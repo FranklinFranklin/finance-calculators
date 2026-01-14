@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cookie Policy — Finance Calculators</title>
+  <meta name="description" content="Cookie policy voor Finance Calculators." />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div>
+        <h1>Cookie Policy</h1>
+        <p>Uitleg over cookies en toestemming (EU). Pas dit aan zodra je advertenties/analytics activeert.</p>
+        <div style="margin-top:10px" class="nav">
+          <span class="badge">Categorieën: <strong>Noodzakelijk / Analytics / Ads</strong></span>
+        </div>
+      </div>
+      <div class="nav">
+        <a class="badge" href="index.html">Home</a>
+        <a class="badge" href="about.html">Over</a>
+        <a class="badge" href="terms.html">Voorwaarden</a>
+        <a class="badge" href="#" data-action="open-consent">Cookie voorkeuren</a>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px;">
+      <h2>1. Wat zijn cookies? <span class="badge">Basis</span></h2>
+      <div class="content">
+        <p class="small">
+          Cookies zijn kleine tekstbestanden die op je apparaat kunnen worden opgeslagen. Ze helpen om een website goed te laten werken
+          en kunnen worden gebruikt voor metingen (analytics) of advertenties.
+        </p>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px;">
+      <h2>2. Welke categorieën gebruiken we? <span class="badge">EU</span></h2>
+      <div class="content">
+        <p class="small"><strong>Noodzakelijk</strong>: nodig om de website te laten werken en om je cookievoorkeur te onthouden.</p>
+        <p class="small"><strong>Analytics (optioneel)</strong>: meten van gebruik (bijv. paginaweergaven) om de site te verbeteren.</p>
+        <p class="small"><strong>Ads (optioneel)</strong>: tonen van advertenties (bijv. Google AdSense) en mogelijke personalisatie.</p>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px;">
+      <h2>3. Toestemming beheren <span class="badge">Controle</span></h2>
+      <div class="content">
+        <p class="small">
+          Je kunt je voorkeuren op elk moment aanpassen via “Cookie voorkeuren”. We slaan je keuze lokaal op in je browser.
+        </p>
+        <p class="small"><a href="#" data-action="open-consent">Cookie voorkeuren openen</a></p>
+      </div>
+    </div>
+
+    <div class="hr"></div>
+<div class="footer">
+  <div class="nav" style="justify-content:flex-start;">
+    <a class="badge" href="about.html">Over</a>
+    <a class="badge" href="privacy.html">Privacy</a>
+    <a class="badge" href="cookie-policy.html">Cookie policy</a>
+    <a class="badge" href="terms.html">Voorwaarden</a>
+    <a class="badge" href="contact.html">Contact</a>
+    <a class="badge" href="#" data-action="open-consent">Cookie voorkeuren</a>
+  </div>
+  <div style="margin-top:10px;">
+    <strong>Geen financieel advies.</strong> Indicatieve rekenhulp. Contact: <strong>vul-in@jouwdomein.nl</strong>.
+  </div>
+</div>
+  </div>
+<!-- Consent modal shared component -->
+  <div class="consent-modal" role="dialog" aria-label="Cookie voorkeuren">
+    <div class="consent-card" role="document">
+      <div class="consent-head">
+        <div>
+          <h3>Cookie voorkeuren</h3>
+          <p>We gebruiken noodzakelijke opslag voor basisfunctionaliteit. Analytics en advertenties zijn optioneel.</p>
+          <div class="linkrow">
+            <a href="privacy.html">Privacy</a>
+            <a href="cookie-policy.html">Cookie policy</a>
+          </div>
+        </div>
+        <div class="nav">
+          <span class="badge">EU</span>
+        </div>
+      </div>
+      <div class="consent-body">
+        <div class="consent-grid">
+          <div class="consent-item">
+            <h4>Noodzakelijk</h4>
+            <p>Vereist om de site te laten werken en je keuze te onthouden.</p>
+            <div class="switch">
+              <label>Altijd aan</label>
+              <div class="toggle disabled"><span class="knob" style="transform:translateX(20px); background: rgba(61,220,151,.95)"></span></div>
+            </div>
+          </div>
+          <div class="consent-item">
+            <h4>Analytics</h4>
+            <p>Helpt ons begrijpen hoe de site wordt gebruikt (optioneel).</p>
+            <div class="switch">
+              <label for="consentAnalytics">Toestaan</label>
+              <div class="toggle">
+                <input id="consentAnalytics" type="checkbox" />
+                <span class="knob"></span>
+              </div>
+            </div>
+          </div>
+          <div class="consent-item">
+            <h4>Advertenties</h4>
+            <p>Toon advertenties (bijv. Google AdSense). Kan cookies gebruiken (optioneel).</p>
+            <div class="switch">
+              <label for="consentAds">Toestaan</label>
+              <div class="toggle">
+                <input id="consentAds" type="checkbox" />
+                <span class="knob"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="consent-foot">
+        <button type="button" data-action="reject-all">Weigeren</button>
+        <button type="button" data-action="accept-all" class="primary">Alles accepteren</button>
+        <button type="button" data-action="save">Opslaan</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>

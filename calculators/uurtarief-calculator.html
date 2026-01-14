@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Uurtarief calculator ZZP – wat moet je vragen?</title>
+  <meta name="description" content="Bereken een indicatief uurtarief op basis van inkomen, kosten en uren." />
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div>
+        <h1>Uurtarief calculator (ZZP)</h1>
+        <p>Uurtarief calculator ZZP: Bereken een indicatief uurtarief op basis van doelen, kosten en facturabele uren. Indicatief en geen advies.</p>
+        <div style="margin-top:10px" class="nav">
+          <span class="badge">Zoekintentie: <strong>“uurtarief calculator zzp”</strong></span>
+          <span class="badge">Valuta: <strong>EUR</strong></span>
+        </div>
+      </div>
+      <div class="nav">
+        <a class="badge" href="../index.html">Home</a>
+        <a class="badge" href="../about.html">Over</a>
+        <a class="badge" href="../terms.html">Voorwaarden</a>
+        <a class="badge" href="../disclaimer.html">Disclaimer</a>
+        <a class="badge" href="../cookie-policy.html">Cookie policy</a>
+        <a class="badge" href="#" data-action="open-consent">Cookie voorkeuren</a>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h2>Calculator <span class="badge">MVP</span></h2>
+        <div class="content">
+          <form id="calcForm" novalidate>
+            
+<div class="row">
+  <div>
+    <label for="targetNet">Gewenst netto per maand (€)</label>
+    <input id="targetNet" type="number" min="0" step="0.01" value="3500" />
+  </div>
+  <div>
+    <label for="hoursBillable">Facturabele uren per maand</label>
+    <input id="hoursBillable" type="number" min="1" step="1" value="100" />
+  </div>
+</div>
+<div class="row">
+  <div>
+    <label for="overhead">Overhead + kosten per maand (€)</label>
+    <input id="overhead" type="number" min="0" step="0.01" value="600" />
+  </div>
+  <div>
+    <label for="bufferPct">Buffer (%)</label>
+    <input id="bufferPct" type="number" min="0" step="0.01" value="15" />
+  </div>
+</div>
+
+            <div class="actions">
+              <button class="primary" type="submit">Bereken</button>
+              <button type="button" id="resetBtn">Reset</button>
+            </div>
+          </form>
+
+          <div class="result" id="result" aria-live="polite">
+            <strong>Resultaat</strong>
+            <div class="muted" id="resultText">Vul waarden in en klik op “Bereken”.</div>
+          </div>
+
+          <div class="hr"></div>
+          <p class="small">Model: (doel netto + kosten + buffer) / facturabele uren per maand.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Uitleg <span class="badge">300–700 woorden</span></h2>
+        <div class="content">
+          <p class="small">Een uurtarief calculator helpt (startende) freelancers om een realistisch tarief te schatten. Veel mensen vergeten overhead: software, apparatuur, verzekeringen, administratie, niet-facturabele uren en periodes zonder opdrachten.</p>
+          <p class="small">Deze tool is bewust simpel: je voert een gewenst netto maandbedrag in, je maandelijkse kosten en een bufferpercentage. Daarna deel je dit door het aantal facturabele uren. Zo krijg je een tarief dat zowel je inkomen als risico’s afdekt.</p>
+          <p class="small">Gebruik de calculator om te zien wat er gebeurt als je minder facturabele uren hebt (bijvoorbeeld door acquisitie of ziekte) of als je kosten stijgen. Tarieven zijn vaak gevoeliger voor facturabele uren dan mensen denken.</p>
+          <p class="small">Let op: belastingen, BTW en persoonlijke aftrekposten zijn niet meegenomen. Gebruik dit als indicatie en verfijn met je boekhouder of officiële rekenhulpen.</p>
+          <p class="small">Wanneer je meerdere scenario’s vergelijkt, wijzig je steeds één variabele (bijvoorbeeld rente of looptijd). Zo zie je direct welke factor het meeste impact heeft.</p>
+          <p class="small">Deze calculator houdt geen rekening met persoonlijke omstandigheden, uitzonderingen of actuele productvoorwaarden. Voor beslissingen met impact: check je bank/aanbieder of officiële instanties.</p>
+          <p class="small">Wil je sneller vinden wat je zoekt? Bekijk ook de ‘Related calculators’ onderaan voor vergelijkbare rekenhulpen.</p>
+
+          <div class="hr"></div>
+          <h2 style="padding:0; border:0; margin:0 0 6px; font-size:14px;">Voorbeelden</h2>
+          <ul class="small">
+           <li>Doel netto €3.500, kosten €600, buffer 15%, 100 uren → indicatief tarief.</li>
+            <li><a href="noodbuffer-calculator.html">Noodbuffer calculator</a></li>
+            <li><a href="uurtarief-calculator.html">Uurtarief calculator (ZZP)</a></li>
+            <li><a href="budget-planner-calculator.html">Budget planner (50/30/20)</a></li>
+            <li><a href="huur-vs-koop-calculator.html">Huur vs koop calculator</a></li>
+            <li><a href="auto-maandkosten-calculator.html">Auto maandkosten calculator</a></li>
+           <li>Als je uren dalen naar 80, stijgt het tarief direct.</li>
+         </ul>
+
+          <div class="hr"></div>
+
+          <div class="faq">
+            <h2 style="padding:0; border:0; margin:0 0 6px; font-size:14px;">FAQ</h2>
+            <details>
+              <summary>Waarom een buffer?</summary>
+              <div class="small" style="margin-top:8px;">Omdat je niet elke maand dezelfde omzet hebt en er onvoorziene kosten kunnen zijn.</div>
+            </details>
+            <details>
+              <summary>Facturabele uren per maand: wat is realistisch?</summary>
+              <div class="small" style="margin-top:8px;">Dat varieert. Veel freelancers zitten tussen 60–120 facturabele uren afhankelijk van werk en overhead.</div>
+            </details>
+            <details>
+              <summary>Kan ik BTW meenemen?</summary>
+              <div class="small" style="margin-top:8px;">BTW is doorgaans doorbelasting aan de klant. Voor een indicatie is het vaak niet nodig in dit model.</div>
+            </details>
+          </div>
+
+          <div class="hr"></div>
+          <p class="small"><strong>Related calculators</strong></p>
+          <ul class="small">
+            <li><a href="samengestelde-rente-calculator.html">Samengestelde rente calculator</a></li>
+            <li><a href="spaarrente-calculator.html">Spaarrente calculator</a></li>
+            <li><a href="inflatie-calculator.html">Inflatie calculator</a></li>
+            <li><a href="lening-maandlast-calculator.html">Lening maandlast calculator</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+<div class="hr"></div>
+<div class="footer">
+  <div class="nav" style="justify-content:flex-start;">
+    <a class="badge" href="../about.html">Over</a>
+    <a class="badge" href="../privacy.html">Privacy</a>
+    <a class="badge" href="../cookie-policy.html">Cookie policy</a>
+    <a class="badge" href="../terms.html">Voorwaarden</a>
+    <a class="badge" href="../contact.html">Contact</a>
+    <a class="badge" href="#" data-action="open-consent">Cookie voorkeuren</a>
+  </div>
+  <div style="margin-top:10px;">
+    <strong>Geen financieel advies.</strong> Indicatieve rekenhulp. Contact: <strong>vul-in@jouwdomein.nl</strong>.
+  </div>
+</div>
+
+  <!-- Consent modal shared component -->
+  
+  <div class="consent-modal" role="dialog" aria-label="Cookie voorkeuren">
+    <div class="consent-card" role="document">
+      <div class="consent-head">
+        <div>
+          <h3>Cookie voorkeuren</h3>
+          <p>We gebruiken noodzakelijke opslag voor basisfunctionaliteit. Analytics en advertenties zijn optioneel.</p>
+          <div class="linkrow">
+            <a href="../privacy.html">Privacy</a>
+            <a href="../cookie-policy.html">Cookie policy</a>
+          </div>
+        </div>
+        <div class="nav">
+          <span class="badge">EU</span>
+        </div>
+      </div>
+      <div class="consent-body">
+        <div class="consent-grid">
+          <div class="consent-item">
+            <h4>Noodzakelijk</h4>
+            <p>Vereist om de site te laten werken en je keuze te onthouden.</p>
+            <div class="switch">
+              <label>Altijd aan</label>
+              <div class="toggle disabled"><span class="knob" style="transform:translateX(20px); background: rgba(61,220,151,.95)"></span></div>
+            </div>
+          </div>
+          <div class="consent-item">
+            <h4>Analytics</h4>
+            <p>Helpt ons begrijpen hoe de site wordt gebruikt (optioneel).</p>
+            <div class="switch">
+              <label for="consentAnalytics">Toestaan</label>
+              <div class="toggle">
+                <input id="consentAnalytics" type="checkbox" />
+                <span class="knob"></span>
+              </div>
+            </div>
+          </div>
+          <div class="consent-item">
+            <h4>Advertenties</h4>
+            <p>Toon advertenties (bijv. Google AdSense). Kan cookies gebruiken (optioneel).</p>
+            <div class="switch">
+              <label for="consentAds">Toestaan</label>
+              <div class="toggle">
+                <input id="consentAds" type="checkbox" />
+                <span class="knob"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="consent-foot">
+        <button type="button" data-action="reject-all">Weigeren</button>
+        <button type="button" data-action="accept-all" class="primary">Alles accepteren</button>
+        <button type="button" data-action="save">Opslaan</button>
+      </div>
+    </div>
+  </div>
+
+  
+  <script src="../assets/script.js"></script>
+  <script>
+
+(function(){
+  const form=document.getElementById("calcForm");
+  const resetBtn=document.getElementById("resetBtn");
+  const resultText=document.getElementById("resultText");
+  function num(id){ const v=parseFloat(document.getElementById(id).value); return Number.isFinite(v)? v:0; }
+
+  function calc(targetNet, hours, overhead, bufferPct){
+    const h=Math.max(1, Math.round(hours));
+    const base = Math.max(0, targetNet) + Math.max(0, overhead);
+    const buffer = base * (Math.max(0, bufferPct)/100);
+    const needed = base + buffer;
+    const rate = needed / h;
+    return { h, base, buffer, needed, rate };
+  }
+
+  function render(r){
+    const eur=window.FC.formatEUR;
+    resultText.innerHTML = `
+      Benodigde omzet p/maand: <strong>${eur(r.needed)}</strong><br/>
+      Buffer: <strong>${eur(r.buffer)}</strong><br/>
+      Richt-uurtarief (indicatief): <strong>${eur(r.rate)}</strong><br/>
+      <span class="muted">Op basis van ${r.h} facturabele uren/maand.</span>
+    `;
+  }
+
+  form.addEventListener("submit",(e)=>{
+    e.preventDefault();
+    render(calc(num("targetNet"), num("hoursBillable"), num("overhead"), num("bufferPct")));
+  });
+
+  resetBtn.addEventListener("click", ()=>{
+    document.getElementById("targetNet").value=3500;
+    document.getElementById("hoursBillable").value=100;
+    document.getElementById("overhead").value=600;
+    document.getElementById("bufferPct").value=15;
+    resultText.textContent='Vul waarden in en klik op “Bereken”.';
+  });
+})();
+
+  </script>
+</body>
+</html>
