@@ -1,5 +1,5 @@
 :root{
-  --bg:#0b1220;
+  --bg:#4c5870;
   --card:#121b2f;
   --text:#e8eefc;
   --muted:#93a4c7;
@@ -15,8 +15,8 @@
 body{
   margin:0;
   font-family:var(--sans);
-  background: radial-gradient(1200px 700px at 20% 0%, rgba(110,168,254,.20), transparent 55%),
-              radial-gradient(900px 500px at 80% 10%, rgba(61,220,151,.14), transparent 60%),
+  background: radial-gradient(1200px 700px at 20% 0%, rgba(110, 168, 254, 0), transparent 55%),
+              radial-gradient(900px 500px at 80% 10%, rgba(0, 0, 0, 0), transparent 60%),
               var(--bg);
   color:var(--text);
 }
