@@ -1,11 +1,12 @@
 <!doctype html>
 <html lang="nl">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Huur vs koop calculator – wat is goedkoper?</title>
   <meta name="description" content="Vergelijk totale huurkosten met koopkosten over meerdere jaren." />
-  
+
   <link rel="canonical" href="https://btw-rekenen.nl/calculators/huur-vs-koop-calculator.html" />
 
   <meta property="og:type" content="website" />
@@ -17,14 +18,16 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Huur vs koop calculator – wat is goedkoper?" />
   <meta name="twitter:description" content="Vergelijk totale huurkosten met koopkosten over meerdere jaren." />
-<link rel="stylesheet" href="../assets/style.css" />
+  <link rel="stylesheet" href="../assets/style.css" />
 </head>
+
 <body>
   <div class="container">
     <div class="header">
       <div>
         <h1>Huur vs koop calculator</h1>
-        <p>Huur vs koop calculator: Vergelijk huren en kopen op basis van maandlasten en (optioneel) jaarlijkse stijging. Indicatief en geen advies.</p>
+        <p>Huur vs koop calculator: Vergelijk huren en kopen op basis van maandlasten en (optioneel) jaarlijkse
+          stijging. Indicatief en geen advies.</p>
         <div style="margin-top:10px" class="nav">
           <span class="badge">Zoekintentie: <strong>"huur vs koop calculator"</strong></span>
           <span class="badge">Valuta: <strong>EUR</strong></span>
@@ -42,40 +45,40 @@
 
     <div class="grid">
       <div class="card">
-        <h2>Calculator <span class="badge">MVP</span></h2>
+        <h2>Calculator </h2>
         <div class="content">
           <form id="calcForm" novalidate>
-            
-<div class="row">
-  <div>
-    <label for="rent">Huur per maand (€)</label>
-    <input id="rent" type="number" min="0" step="0.01" value="1200" />
-  </div>
-  <div>
-    <label for="buyMonthly">Totale koop-last per maand (€)</label>
-    <input id="buyMonthly" type="number" min="0" step="0.01" value="1650" />
-  </div>
-</div>
-<div class="row">
-  <div>
-    <label for="horizon">Vergelijkperiode (jaren)</label>
-    <input id="horizon" type="number" min="1" step="1" value="5" />
-  </div>
-  <div>
-    <label for="oneOffBuy">Eenmalige koopkosten (€)</label>
-    <input id="oneOffBuy" type="number" min="0" step="0.01" value="10000" />
-  </div>
-</div>
-<div class="row">
-  <div>
-    <label for="rentIncrease">Huurstijging per jaar (%)</label>
-    <input id="rentIncrease" type="number" step="0.01" value="2.5" />
-  </div>
-  <div>
-    <label for="buyIncrease">Stijging koop-last per jaar (%)</label>
-    <input id="buyIncrease" type="number" step="0.01" value="1.5" />
-  </div>
-</div>
+
+            <div class="row">
+              <div>
+                <label for="rent">Huur per maand (€)</label>
+                <input id="rent" type="number" min="0" step="0.01" value="1200" />
+              </div>
+              <div>
+                <label for="buyMonthly">Totale koop-last per maand (€)</label>
+                <input id="buyMonthly" type="number" min="0" step="0.01" value="1650" />
+              </div>
+            </div>
+            <div class="row">
+              <div>
+                <label for="horizon">Vergelijkperiode (jaren)</label>
+                <input id="horizon" type="number" min="1" step="1" value="5" />
+              </div>
+              <div>
+                <label for="oneOffBuy">Eenmalige koopkosten (€)</label>
+                <input id="oneOffBuy" type="number" min="0" step="0.01" value="10000" />
+              </div>
+            </div>
+            <div class="row">
+              <div>
+                <label for="rentIncrease">Huurstijging per jaar (%)</label>
+                <input id="rentIncrease" type="number" step="0.01" value="2.5" />
+              </div>
+              <div>
+                <label for="buyIncrease">Stijging koop-last per jaar (%)</label>
+                <input id="buyIncrease" type="number" step="0.01" value="1.5" />
+              </div>
+            </div>
 
             <div class="actions">
               <button class="primary" type="submit">Bereken</button>
@@ -89,32 +92,43 @@
           </div>
 
           <div class="hr"></div>
-          <p class="small">Model: totale kosten = som van maandlasten per jaar (met stijging) + eenmalige koopkosten.</p>
+          <p class="small">Model: totale kosten = som van maandlasten per jaar (met stijging) + eenmalige koopkosten.
+          </p>
         </div>
       </div>
 
       <div class="card">
         <h2>Uitleg <span class="badge">300–700 woorden</span></h2>
         <div class="content">
-          <p class="small">Met een huur vs koop calculator kun je een eerste indicatie krijgen of huren of kopen goedkoper uitvalt over een gekozen periode. Dit helpt om scenario's te vergelijken voordat je in details duikt.</p>
-          <p class="small">Deze MVP rekent uitsluitend met totale maandlasten en eenmalige kosten. Het houdt geen rekening met vermogensopbouw, waardestijging van het huis, renteaftrek, onderhoudsrisico's of belastingen. Daardoor is de uitkomst een grove indicatie.</p>
-          <p class="small">Gebruik de calculator om de gevoeligheid te zien: hoe verandert het resultaat als de huurstijging hoger is, of als kooplasten stijgen?</p>
-          <p class="small">Voor serieuze beslissingen heb je een uitgebreidere berekening nodig met hypotheekdetails, onderhoud, waardeverandering en fiscale effecten.</p>
-          <p class="small">Wanneer je meerdere scenario's vergelijkt, wijzig je steeds één variabele (bijvoorbeeld rente of looptijd). Zo zie je direct welke factor het meeste impact heeft.</p>
-          <p class="small">Deze calculator houdt geen rekening met persoonlijke omstandigheden, uitzonderingen of actuele productvoorwaarden. Voor beslissingen met impact: check je bank/aanbieder of officiële instanties.</p>
-          <p class="small">Wil je sneller vinden wat je zoekt? Bekijk ook de ‘Related calculators' onderaan voor vergelijkbare rekenhulpen.</p>
+          <p class="small">Met een huur vs koop calculator kun je een eerste indicatie krijgen of huren of kopen
+            goedkoper uitvalt over een gekozen periode. Dit helpt om scenario's te vergelijken voordat je in details
+            duikt.</p>
+          <p class="small">Deze MVP rekent uitsluitend met totale maandlasten en eenmalige kosten. Het houdt geen
+            rekening met vermogensopbouw, waardestijging van het huis, renteaftrek, onderhoudsrisico's of belastingen.
+            Daardoor is de uitkomst een grove indicatie.</p>
+          <p class="small">Gebruik de calculator om de gevoeligheid te zien: hoe verandert het resultaat als de
+            huurstijging hoger is, of als kooplasten stijgen?</p>
+          <p class="small">Voor serieuze beslissingen heb je een uitgebreidere berekening nodig met hypotheekdetails,
+            onderhoud, waardeverandering en fiscale effecten.</p>
+          <p class="small">Wanneer je meerdere scenario's vergelijkt, wijzig je steeds één variabele (bijvoorbeeld rente
+            of looptijd). Zo zie je direct welke factor het meeste impact heeft.</p>
+          <p class="small">Deze calculator houdt geen rekening met persoonlijke omstandigheden, uitzonderingen of
+            actuele productvoorwaarden. Voor beslissingen met impact: check je bank/aanbieder of officiële instanties.
+          </p>
+          <p class="small">Wil je sneller vinden wat je zoekt? Bekijk ook de ‘Related calculators' onderaan voor
+            vergelijkbare rekenhulpen.</p>
 
           <div class="hr"></div>
           <h2 style="padding:0; border:0; margin:0 0 6px; font-size:14px;">Voorbeelden</h2>
           <ul class="small">
-           <li>Huur €1.200, koop-last €1.650, periode 5 jaar, koopkosten €10.000.</li>
+            <li>Huur €1.200, koop-last €1.650, periode 5 jaar, koopkosten €10.000.</li>
             <li><a href="noodbuffer-calculator.html">Noodbuffer calculator</a></li>
             <li><a href="uurtarief-calculator.html">Uurtarief calculator (ZZP)</a></li>
             <li><a href="budget-planner-calculator.html">Budget planner (50/30/20)</a></li>
             <li><a href="huur-vs-koop-calculator.html">Huur vs koop calculator</a></li>
             <li><a href="auto-maandkosten-calculator.html">Auto maandkosten calculator</a></li>
-           <li>Pas huur- en koopstijging aan om scenario's te vergelijken.</li>
-         </ul>
+            <li>Pas huur- en koopstijging aan om scenario's te vergelijken.</li>
+          </ul>
 
           <div class="hr"></div>
 
@@ -122,15 +136,18 @@
             <h2 style="padding:0; border:0; margin:0 0 6px; font-size:14px;">FAQ</h2>
             <details>
               <summary>Is ‘koop-last per maand' de hypotheek?</summary>
-              <div class="small" style="margin-top:8px;">Het is het totaal: hypotheek + verzekeringen + reservering onderhoud (als je dat wilt meenemen).</div>
+              <div class="small" style="margin-top:8px;">Het is het totaal: hypotheek + verzekeringen + reservering
+                onderhoud (als je dat wilt meenemen).</div>
             </details>
             <details>
               <summary>Waarom is dit slechts indicatief?</summary>
-              <div class="small" style="margin-top:8px;">Omdat waardestijging, belasting en onderhoud niet zijn meegenomen. Dit is bewust simpel voor snelle vergelijking.</div>
+              <div class="small" style="margin-top:8px;">Omdat waardestijging, belasting en onderhoud niet zijn
+                meegenomen. Dit is bewust simpel voor snelle vergelijking.</div>
             </details>
             <details>
               <summary>Kan ik dit uitbreiden?</summary>
-              <div class="small" style="margin-top:8px;">Ja. Een volgende versie kan waardestijging, eigen inbreng en restschuld meenemen.</div>
+              <div class="small" style="margin-top:8px;">Ja. Een volgende versie kan waardestijging, eigen inbreng en
+                restschuld meenemen.</div>
             </details>
           </div>
 
@@ -146,84 +163,86 @@
       </div>
     </div>
 
-<div class="hr"></div>
-<div class="footer">
-  <div class="nav" style="justify-content:flex-start;">
-    <a class="badge" href="../about.html">Over</a>
-    <a class="badge" href="../privacy.html">Privacy</a>
-    <a class="badge" href="../cookie-policy.html">Cookie policy</a>
-    <a class="badge" href="../terms.html">Voorwaarden</a>
-    <a class="badge" href="../contact.html">Contact</a>
-    <a class="badge" href="#" data-action="open-consent">Cookie voorkeuren</a>
-  </div>
-  <div style="margin-top:10px;">
-    <strong>Geen financieel advies.</strong> Indicatieve rekenhulp. Contact: <strong>info@techuis.nl</strong>.
-  </div>
-</div>
-
-  <!-- Consent modal shared component -->
-  
-  <div class="consent-modal" role="dialog" aria-label="Cookie voorkeuren">
-    <div class="consent-card" role="document">
-      <div class="consent-head">
-        <div>
-          <h3>Cookie voorkeuren</h3>
-          <p>We gebruiken noodzakelijke opslag voor basisfunctionaliteit. Analytics en advertenties zijn optioneel.</p>
-          <div class="linkrow">
-            <a href="../privacy.html">Privacy</a>
-            <a href="../cookie-policy.html">Cookie policy</a>
-          </div>
-        </div>
-        <div class="nav">
-          <span class="badge">EU</span>
-        </div>
+    <div class="hr"></div>
+    <div class="footer">
+      <div class="nav" style="justify-content:flex-start;">
+        <a class="badge" href="../about.html">Over</a>
+        <a class="badge" href="../privacy.html">Privacy</a>
+        <a class="badge" href="../cookie-policy.html">Cookie policy</a>
+        <a class="badge" href="../terms.html">Voorwaarden</a>
+        <a class="badge" href="../contact.html">Contact</a>
+        <a class="badge" href="#" data-action="open-consent">Cookie voorkeuren</a>
       </div>
-      <div class="consent-body">
-        <div class="consent-grid">
-          <div class="consent-item">
-            <h4>Noodzakelijk</h4>
-            <p>Vereist om de site te laten werken en je keuze te onthouden.</p>
-            <div class="switch">
-              <label>Altijd aan</label>
-              <div class="toggle disabled"><span class="knob" style="transform:translateX(20px); background: rgba(61,220,151,.95)"></span></div>
-            </div>
-          </div>
-          <div class="consent-item">
-            <h4>Analytics</h4>
-            <p>Helpt ons begrijpen hoe de site wordt gebruikt (optioneel).</p>
-            <div class="switch">
-              <label for="consentAnalytics">Toestaan</label>
-              <div class="toggle">
-                <input id="consentAnalytics" type="checkbox" />
-                <span class="knob"></span>
-              </div>
-            </div>
-          </div>
-          <div class="consent-item">
-            <h4>Advertenties</h4>
-            <p>Toon advertenties (bijv. Google AdSense). Kan cookies gebruiken (optioneel).</p>
-            <div class="switch">
-              <label for="consentAds">Toestaan</label>
-              <div class="toggle">
-                <input id="consentAds" type="checkbox" />
-                <span class="knob"></span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="consent-foot">
-        <button type="button" data-action="reject-all">Weigeren</button>
-        <button type="button" data-action="accept-all" class="primary">Alles accepteren</button>
-        <button type="button" data-action="save">Opslaan</button>
+      <div style="margin-top:10px;">
+        <strong>Geen financieel advies.</strong> Indicatieve rekenhulp. Contact: <strong>info@techuis.nl</strong>.
       </div>
     </div>
-  </div>
 
-  
-  <script src="../assets/script.js"></script>
-  
-<script type="application/ld+json">
+    <!-- Consent modal shared component -->
+
+    <div class="consent-modal" role="dialog" aria-label="Cookie voorkeuren">
+      <div class="consent-card" role="document">
+        <div class="consent-head">
+          <div>
+            <h3>Cookie voorkeuren</h3>
+            <p>We gebruiken noodzakelijke opslag voor basisfunctionaliteit. Analytics en advertenties zijn optioneel.
+            </p>
+            <div class="linkrow">
+              <a href="../privacy.html">Privacy</a>
+              <a href="../cookie-policy.html">Cookie policy</a>
+            </div>
+          </div>
+          <div class="nav">
+            <span class="badge">EU</span>
+          </div>
+        </div>
+        <div class="consent-body">
+          <div class="consent-grid">
+            <div class="consent-item">
+              <h4>Noodzakelijk</h4>
+              <p>Vereist om de site te laten werken en je keuze te onthouden.</p>
+              <div class="switch">
+                <label>Altijd aan</label>
+                <div class="toggle disabled"><span class="knob"
+                    style="transform:translateX(20px); background: rgba(61,220,151,.95)"></span></div>
+              </div>
+            </div>
+            <div class="consent-item">
+              <h4>Analytics</h4>
+              <p>Helpt ons begrijpen hoe de site wordt gebruikt (optioneel).</p>
+              <div class="switch">
+                <label for="consentAnalytics">Toestaan</label>
+                <div class="toggle">
+                  <input id="consentAnalytics" type="checkbox" />
+                  <span class="knob"></span>
+                </div>
+              </div>
+            </div>
+            <div class="consent-item">
+              <h4>Advertenties</h4>
+              <p>Toon advertenties (bijv. Google AdSense). Kan cookies gebruiken (optioneel).</p>
+              <div class="switch">
+                <label for="consentAds">Toestaan</label>
+                <div class="toggle">
+                  <input id="consentAds" type="checkbox" />
+                  <span class="knob"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="consent-foot">
+          <button type="button" data-action="reject-all">Weigeren</button>
+          <button type="button" data-action="accept-all" class="primary">Alles accepteren</button>
+          <button type="button" data-action="save">Opslaan</button>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="../assets/script.js"></script>
+
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -255,7 +274,7 @@
   ]
 }
 </script>
-<script type="application/ld+json">
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebApplication",
@@ -266,59 +285,60 @@
   "description": "Vergelijk totale huurkosten met koopkosten over meerdere jaren."
 }
 </script>
-<script>
+    <script>
 
-(function(){
-  const form=document.getElementById("calcForm");
-  const resetBtn=document.getElementById("resetBtn");
-  const resultText=document.getElementById("resultText");
-  function num(id){ const v=parseFloat(document.getElementById(id).value); return Number.isFinite(v)? v:0; }
+      (function () {
+        const form = document.getElementById("calcForm");
+        const resetBtn = document.getElementById("resetBtn");
+        const resultText = document.getElementById("resultText");
+        function num(id) { const v = parseFloat(document.getElementById(id).value); return Number.isFinite(v) ? v : 0; }
 
-  function totalStream(startMonthly, increasePct, years){
-    let total=0;
-    const y=Math.max(1, Math.round(years));
-    let m=Math.max(0, startMonthly);
-    for(let i=0;i<y;i++){
-      total += m * 12;
-      m = m * (1 + (increasePct/100));
-    }
-    return total;
-  }
+        function totalStream(startMonthly, increasePct, years) {
+          let total = 0;
+          const y = Math.max(1, Math.round(years));
+          let m = Math.max(0, startMonthly);
+          for (let i = 0; i < y; i++) {
+            total += m * 12;
+            m = m * (1 + (increasePct / 100));
+          }
+          return total;
+        }
 
-  function calc(rent, buyMonthly, years, oneOffBuy, rentInc, buyInc){
-    const y=Math.max(1, Math.round(years));
-    const rentTotal = totalStream(rent, rentInc, y);
-    const buyTotal = totalStream(buyMonthly, buyInc, y) + Math.max(0, oneOffBuy);
-    return { y, rentTotal, buyTotal, diff: buyTotal - rentTotal };
-  }
+        function calc(rent, buyMonthly, years, oneOffBuy, rentInc, buyInc) {
+          const y = Math.max(1, Math.round(years));
+          const rentTotal = totalStream(rent, rentInc, y);
+          const buyTotal = totalStream(buyMonthly, buyInc, y) + Math.max(0, oneOffBuy);
+          return { y, rentTotal, buyTotal, diff: buyTotal - rentTotal };
+        }
 
-  function render(r){
-    const eur=window.FC.formatEUR;
-    const cheaper = r.diff > 0 ? "Huren is in deze berekening goedkoper" : (r.diff < 0 ? "Kopen is in deze berekening goedkoper" : "Gelijk");
-    resultText.innerHTML = `
+        function render(r) {
+          const eur = window.FC.formatEUR;
+          const cheaper = r.diff > 0 ? "Huren is in deze berekening goedkoper" : (r.diff < 0 ? "Kopen is in deze berekening goedkoper" : "Gelijk");
+          resultText.innerHTML = `
       Totale huurkosten: <strong>${eur(r.rentTotal)}</strong><br/>
       Totale koopkosten (incl. eenmalig): <strong>${eur(r.buyTotal)}</strong><br/>
       Verschil (koop - huur): <strong>${eur(r.diff)}</strong><br/>
       <span class="muted">${cheaper} over ${r.y} jaar (indicatief).</span>
     `;
-  }
+        }
 
-  form.addEventListener("submit",(e)=>{
-    e.preventDefault();
-    render(calc(num("rent"), num("buyMonthly"), num("horizon"), num("oneOffBuy"), num("rentIncrease"), num("buyIncrease")));
-  });
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+          render(calc(num("rent"), num("buyMonthly"), num("horizon"), num("oneOffBuy"), num("rentIncrease"), num("buyIncrease")));
+        });
 
-  resetBtn.addEventListener("click", ()=>{
-    document.getElementById("rent").value=1200;
-    document.getElementById("buyMonthly").value=1650;
-    document.getElementById("horizon").value=5;
-    document.getElementById("oneOffBuy").value=10000;
-    document.getElementById("rentIncrease").value=2.5;
-    document.getElementById("buyIncrease").value=1.5;
-    resultText.textContent='Vul waarden in en klik op "Bereken".';
-  });
-})();
+        resetBtn.addEventListener("click", () => {
+          document.getElementById("rent").value = 1200;
+          document.getElementById("buyMonthly").value = 1650;
+          document.getElementById("horizon").value = 5;
+          document.getElementById("oneOffBuy").value = 10000;
+          document.getElementById("rentIncrease").value = 2.5;
+          document.getElementById("buyIncrease").value = 1.5;
+          resultText.textContent = 'Vul waarden in en klik op "Bereken".';
+        });
+      })();
 
-  </script>
+    </script>
 </body>
+
 </html>
