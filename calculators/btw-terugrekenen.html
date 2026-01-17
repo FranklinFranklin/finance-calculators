@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BTW terugrekenen – BTW uit bedrag halen | btw-rekenen.nl</title>
+  <meta name="description" content="BTW terugrekenen? Haal BTW uit een bedrag inclusief BTW. Kies zelf het BTW-percentage en rond af zoals je wilt. Gratis en snel." />
+  <link rel="canonical" href="https://btw-rekenen.nl/calculators/btw-terugrekenen.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="btw-rekenen.nl" />
+  <meta property="og:url" content="https://btw-rekenen.nl/calculators/btw-terugrekenen.html" />
+  <meta property="og:title" content="BTW terugrekenen – BTW uit bedrag halen" />
+  <meta property="og:description" content="BTW terugrekenen? Haal BTW uit een bedrag inclusief BTW. Kies zelf het BTW-percentage en rond af zoals je wilt. Gratis en snel." />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="BTW terugrekenen – BTW uit bedrag halen" />
+  <meta name="twitter:description" content="BTW terugrekenen? Haal BTW uit een bedrag inclusief BTW. Kies zelf het BTW-percentage en rond af zoals je wilt. Gratis en snel." />
+
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <div>
+        <h1>BTW terugrekenen</h1>
+        <p>BTW terugrekenen: haal BTW uit een bedrag inclusief BTW met instelbaar percentage. Handig voor controle en offertes. Indicatief.</p>
+        <div class="nav" style="margin-top:10px;">
+          <span class="badge">Zoekintentie: <strong>"btw terugrekenen"</strong></span>
+          <span class="badge">Valuta: <strong>EUR</strong></span>
+        </div>
+      </div>
+      <div class="nav">
+        <a class="badge" href="../index.html">Home</a>
+        <a class="badge" href="../disclaimer.html">Disclaimer</a>
+        <a class="badge" href="../cookie-policy.html">Cookie policy</a>
+        <a class="badge" href="#" role="button" data-action="open-consent">Cookie voorkeuren</a>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h2>Calculator <span class="badge">MVP</span></h2>
+        <div class="content">
+          <form id="calcForm" novalidate>
+            <div class="row">
+              <div>
+                <label for="amount">Bedrag incl. BTW (€)</label>
+                <input id="amount" type="number" min="0" step="0.01" value="121" />
+              </div>
+              <div>
+                <label for="vat">BTW percentage (%)</label>
+                <input id="vat" type="number" min="0" step="0.01" value="21" />
+              </div>
+            </div>
+            <div class="row">
+              <div>
+                <label for="round">Afronden (decimalen)</label>
+                <select id="round">
+                  <option value="2" selected>2</option>
+                  <option value="0">0</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+              <div>
+                <label for="mode">Toon ook</label>
+                <select id="mode">
+                  <option value="excl" selected>Excl. + BTW</option>
+                  <option value="vatonly">Alleen BTW</option>
+                </select>
+              </div>
+            </div>
+            <div class="actions">
+              <button class="primary" type="submit">Bereken</button>
+              <button type="button" id="resetBtn">Reset</button>
+            </div>
+          </form>
+
+          <div class="result" id="result" aria-live="polite">
+            <strong>Resultaat</strong>
+            <div class="muted" id="resultText">Vul waarden in en klik op "Bereken".</div>
+          </div>
+
+          <div class="hr"></div>
+          <p class="small">Excl = incl / (1 + btw%). BTW = incl − excl. Indicatief; controleer je administratie.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Uitleg</h2>
+        <div class="content">
+          <p class="small">Met BTW terugrekenen bereken je hoeveel BTW er in een bedrag zit. Je start met een bedrag inclusief BTW en rekent terug naar exclusief BTW.</p>
+          <p class="small">Je kiest zelf het BTW-percentage (bijvoorbeeld 21% of 9%). Zo kun je het juiste tarief per product of dienst gebruiken.</p>
+          <p class="small">Gebruik de uitkomst als indicatie. Voor aangifte of facturatie gebruik je altijd je officiële administratie en regels.</p>
+          <div class="hr"></div>
+
+          <h3 class="small" style="margin:0 0 6px;">Voorbeelden</h3>
+          <ul class="small">
+            <li>Incl. €121 met 21% → excl. €100 en BTW €21.</li>
+            <li>Incl. €109 met 9% → excl. €100 en BTW €9.</li>
+          </ul>
+
+          <div class="hr"></div>
+          <h3 class="small" style="margin:0 0 6px;">Gerelateerde calculators</h3>
+          <ul class="small">
+            <li><a href="btw-calculator.html">BTW calculator</a></li>
+            <li><a href="uurtarief-calculator.html">Uurtarief calculator (ZZP)</a></li>
+            <li><a href="budget-planner-calculator.html">Budget planner (50/30/20)</a></li>
+            <li><a href="lening-maandlast-calculator.html">Lening maandlast calculator</a></li>
+            <li><a href="noodbuffer-calculator.html">Noodbuffer calculator</a></li>
+          </ul>
+
+          <div class="hr"></div>
+          <div class="faq">
+            <h3 class="small" style="margin:0 0 6px;">FAQ</h3>
+            <details>
+              <summary>Wat is het verschil met &#x27;BTW calculator&#x27;?</summary>
+              <div class="small" style="margin-top:8px;">Deze pagina focust op incl → excl (terugrekenen). De BTW calculator kan beide richtingen.</div>
+            </details>
+            <details>
+              <summary>Welke tarieven bestaan er?</summary>
+              <div class="small" style="margin-top:8px;">Je stelt het percentage zelf in; tarieven kunnen per situatie verschillen.</div>
+            </details>
+            <details>
+              <summary>Waarom afronden?</summary>
+              <div class="small" style="margin-top:8px;">Voor bedragen in euro&#x27;s wordt vaak op 2 decimalen afgerond; kies wat past bij je gebruik.</div>
+            </details>
+          </div>
+
+          <div class="hr"></div>
+          <p class="small"><strong>Related calculators</strong></p>
+          <ul class="small">
+            <li><a href="spaarrente-calculator.html">Spaarrente calculator</a></li>
+            <li><a href="inflatie-calculator.html">Inflatie calculator</a></li>
+            <li><a href="samengestelde-rente-calculator.html">Samengestelde rente calculator</a></li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="hr"></div>
+    <div class="footer">
+      <div class="nav" style="justify-content:flex-start;">
+        <a class="badge" href="../about.html">Over</a>
+        <a class="badge" href="../privacy.html">Privacy</a>
+        <a class="badge" href="../cookie-policy.html">Cookie policy</a>
+        <a class="badge" href="../terms.html">Voorwaarden</a>
+        <a class="badge" href="../contact.html">Contact</a>
+        <a class="badge" href="#" role="button" data-action="open-consent">Cookie voorkeuren</a>
+      </div>
+      <div style="margin-top:10px;">
+        <strong>Geen financieel advies.</strong> Indicatieve rekenhulp. Contact: <strong>info@techuis.nl</strong>.
+      </div>
+    </div>
+  </div>
+  <!-- Consent modal shared component -->
+  <div class="consent-modal" role="dialog" aria-label="Cookie voorkeuren">
+    <div class="consent-card" role="document">
+      <div class="consent-head">
+        <div>
+          <h3>Cookie voorkeuren</h3>
+          <p>We gebruiken noodzakelijke opslag voor basisfunctionaliteit. Analytics en advertenties zijn optioneel.</p>
+          <div class="linkrow">
+            <a href="../privacy.html">Privacy</a>
+            <a href="../cookie-policy.html">Cookie policy</a>
+          </div>
+        </div>
+        <div class="nav">
+          <span class="badge">EU</span>
+        </div>
+      </div>
+      <div class="consent-body">
+        <div class="consent-grid">
+          <div class="consent-item">
+            <h4>Noodzakelijk</h4>
+            <p>Vereist om de site te laten werken en je keuze te onthouden.</p>
+            <div class="switch">
+              <label>Altijd aan</label>
+              <div class="toggle disabled"><span class="knob" style="transform:translateX(20px); background: rgba(61,220,151,.95)"></span></div>
+            </div>
+          </div>
+          <div class="consent-item">
+            <h4>Analytics</h4>
+            <p>Helpt ons begrijpen hoe de site wordt gebruikt (optioneel).</p>
+            <div class="switch">
+              <label for="consentAnalytics">Toestaan</label>
+              <div class="toggle">
+                <input id="consentAnalytics" type="checkbox" />
+                <span class="knob"></span>
+              </div>
+            </div>
+          </div>
+          <div class="consent-item">
+            <h4>Advertenties</h4>
+            <p>Toon advertenties (bijv. Google AdSense). Kan cookies gebruiken (optioneel).</p>
+            <div class="switch">
+              <label for="consentAds">Toestaan</label>
+              <div class="toggle">
+                <input id="consentAds" type="checkbox" />
+                <span class="knob"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="consent-foot">
+        <button type="button" data-action="reject-all">Weigeren</button>
+        <button type="button" data-action="accept-all" class="primary">Alles accepteren</button>
+        <button type="button" data-action="save">Opslaan</button>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="../assets/script.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Wat is het verschil met 'BTW calculator'?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Deze pagina focust op incl → excl (terugrekenen). De BTW calculator kan beide richtingen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Welke tarieven bestaan er?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Je stelt het percentage zelf in; tarieven kunnen per situatie verschillen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Waarom afronden?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Voor bedragen in euro's wordt vaak op 2 decimalen afgerond; kies wat past bij je gebruik."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "BTW terugrekenen",
+  "url": "https://btw-rekenen.nl/calculators/btw-terugrekenen.html",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "description": "BTW terugrekenen? Haal BTW uit een bedrag inclusief BTW. Kies zelf het BTW-percentage en rond af zoals je wilt. Gratis en snel."
+}
+</script>
+  <script>
+
+(function(){
+  const form = document.getElementById("calcForm");
+  const resetBtn = document.getElementById("resetBtn");
+  const resultText = document.getElementById("resultText");
+
+  function num(id){
+    const v = parseFloat(document.getElementById(id).value);
+    return Number.isFinite(v) ? v : 0;
+  }
+  function str(id){ return document.getElementById(id).value; }
+  function roundTo(n, decimals){
+    const d = Math.max(0, parseInt(decimals, 10) || 0);
+    const factor = Math.pow(10, d);
+    return Math.round(n * factor) / factor;
+  }
+  const eur = (window.FC && typeof window.FC.formatEUR === "function")
+    ? window.FC.formatEUR
+    : (x) => `€${Number(x).toFixed(2)}`;
+
+  function calc(incl, vatPct){
+    const rate = Math.max(0, vatPct) / 100;
+    const excl = rate === 0 ? incl : incl / (1 + rate);
+    const vat = incl - excl;
+    return { incl, excl, vat };
+  }
+
+  function render(res, decimals){
+    const incl = roundTo(res.incl, decimals);
+    const excl = roundTo(res.excl, decimals);
+    const vat = roundTo(res.vat, decimals);
+    const mode = str("mode");
+
+    if(mode === "vatonly"){
+      resultText.innerHTML = `BTW in bedrag: <strong>${eur(vat)}</strong>`;
+      return;
+    }
+    resultText.innerHTML = `
+      Excl. BTW: <strong>${eur(excl)}</strong><br/>
+      BTW: <strong>${eur(vat)}</strong><br/>
+      Incl. BTW: <strong>${eur(incl)}</strong>
+    `;
+  }
+
+  form.addEventListener("submit",(e)=>{
+    e.preventDefault();
+    const decimals = str("round");
+    render(calc(num("amount"), num("vat")), decimals);
+  });
+
+  resetBtn.addEventListener("click",()=>{
+    document.getElementById("amount").value = 121;
+    document.getElementById("vat").value = 21;
+    document.getElementById("round").value = "2";
+    document.getElementById("mode").value = "excl";
+    resultText.textContent = 'Vul waarden in en klik op "Bereken".';
+  });
+
+})();
+
+  </script>
+</body>
+</html>

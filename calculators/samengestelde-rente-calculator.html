@@ -5,7 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Samengestelde rente calculator (spaargroei berekenen)</title>
   <meta name="description" content="Bereken eenvoudig je spaargroei met samengestelde rente. Zie wat rente-op-rente doet over meerdere jaren." />
-  <link rel="stylesheet" href="../assets/style.css" />
+  
+  <link rel="canonical" href="https://btw-rekenen.nl/calculators/samengestelde-rente-calculator.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="btw-rekenen.nl" />
+  <meta property="og:url" content="https://btw-rekenen.nl/calculators/samengestelde-rente-calculator.html" />
+  <meta property="og:title" content="Samengestelde rente calculator (spaargroei berekenen)" />
+  <meta property="og:description" content="Bereken eenvoudig je spaargroei met samengestelde rente. Zie wat rente-op-rente doet over meerdere jaren." />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Samengestelde rente calculator (spaargroei berekenen)" />
+  <meta name="twitter:description" content="Bereken eenvoudig je spaargroei met samengestelde rente. Zie wat rente-op-rente doet over meerdere jaren." />
+<link rel="stylesheet" href="../assets/style.css" />
 </head>
 <body>
   <div class="container">
@@ -14,7 +26,7 @@
         <h1>Samengestelde rente calculator</h1>
         <p>Samengestelde rente calculator: Bereken het eindbedrag op basis van startbedrag, maandelijkse inleg, rente en looptijd. Indicatief en geen advies.</p>
         <div style="margin-top:10px" class="nav">
-          <span class="badge">Zoekintentie: <strong>“samengestelde rente calculator”</strong></span>
+          <span class="badge">Zoekintentie: <strong>"samengestelde rente calculator"</strong></span>
           <span class="badge">Valuta: <strong>EUR</strong></span>
         </div>
       </div>
@@ -61,7 +73,7 @@
 
           <div class="result" id="result" aria-live="polite">
             <strong>Resultaat</strong>
-            <div class="muted" id="resultText">Vul waarden in en klik op “Bereken”.</div>
+            <div class="muted" id="resultText">Vul waarden in en klik op "Bereken".</div>
           </div>
 
           <div class="hr"></div>
@@ -72,7 +84,7 @@
       </div>
 
       <div class="card">
-        <h2>Uitleg</h2>
+        <h2>Uitleg <span class="badge">300–500 woorden</span></h2>
         <div class="content">
           <p class="small">
             Met samengestelde rente groeit je vermogen doordat je rente ontvangt op je oorspronkelijke inleg én op eerder ontvangen rente.
@@ -93,7 +105,7 @@
             <li><a href="budget-planner-calculator.html">Budget planner (50/30/20)</a></li>
             <li><a href="huur-vs-koop-calculator.html">Huur vs koop calculator</a></li>
             <li><a href="auto-maandkosten-calculator.html">Auto maandkosten calculator</a></li>
-            <li>Geen maandinleg? Zet “Maandelijkse inleg” op €0.</li>
+            <li>Geen maandinleg? Zet "Maandelijkse inleg" op €0.</li>
           </ul>
 
           <div class="hr"></div>
@@ -201,7 +213,51 @@
   </div>
 
   <script src="../assets/script.js"></script>
-  <script>
+  
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is dit financieel advies?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nee. Dit is een indicatieve rekenhulp. Zie de disclaimer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hoe wordt de rente berekend?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We gebruiken maandelijkse samengestelde rente op basis van het jaarpercentage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Houdt dit rekening met belasting en kosten?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nee. Je kunt later extra velden toevoegen (bijv. kosten % of box 3 schatting)."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Samengestelde rente calculator",
+  "url": "https://btw-rekenen.nl/calculators/samengestelde-rente-calculator.html",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "description": "Bereken eenvoudig je spaargroei met samengestelde rente. Zie wat rente-op-rente doet over meerdere jaren."
+}
+</script>
+<script>
     // Page-specific calculator logic (simple + readable)
     (function(){
       const form = document.getElementById("calcForm");
@@ -258,7 +314,7 @@
         document.getElementById("monthly").value = 100;
         document.getElementById("rate").value = 5;
         document.getElementById("years").value = 10;
-        resultText.textContent = 'Vul waarden in en klik op “Bereken”.';
+        resultText.textContent = 'Vul waarden in en klik op "Bereken".';
       });
     })();
   </script>

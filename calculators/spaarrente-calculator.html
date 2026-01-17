@@ -5,7 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Spaarrente calculator – hoeveel levert sparen op?</title>
   <meta name="description" content="Bereken hoeveel spaarrente je ontvangt per maand en per jaar. Indicatieve berekening." />
-  <link rel="stylesheet" href="../assets/style.css" />
+  
+  <link rel="canonical" href="https://btw-rekenen.nl/calculators/spaarrente-calculator.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="btw-rekenen.nl" />
+  <meta property="og:url" content="https://btw-rekenen.nl/calculators/spaarrente-calculator.html" />
+  <meta property="og:title" content="Spaarrente calculator – hoeveel levert sparen op?" />
+  <meta property="og:description" content="Bereken hoeveel spaarrente je ontvangt per maand en per jaar. Indicatieve berekening." />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Spaarrente calculator – hoeveel levert sparen op?" />
+  <meta name="twitter:description" content="Bereken hoeveel spaarrente je ontvangt per maand en per jaar. Indicatieve berekening." />
+<link rel="stylesheet" href="../assets/style.css" />
 </head>
 <body>
   <div class="container">
@@ -14,7 +26,7 @@
         <h1>Spaarrente calculator</h1>
         <p>Spaarrente calculator: Bereken je spaargroei met rente, startbedrag en maandelijkse inleg. Indicatief en geen financieel advies.</p>
         <div style="margin-top:10px" class="nav">
-          <span class="badge">Zoekintentie: <strong>“spaarrente calculator”</strong></span>
+          <span class="badge">Zoekintentie: <strong>"spaarrente calculator"</strong></span>
           <span class="badge">Valuta: <strong>EUR</strong></span>
         </div>
       </div>
@@ -61,7 +73,7 @@
 
           <div class="result" id="result" aria-live="polite">
             <strong>Resultaat</strong>
-            <div class="muted" id="resultText">Vul waarden in en klik op “Bereken”.</div>
+            <div class="muted" id="resultText">Vul waarden in en klik op "Bereken".</div>
           </div>
 
           <div class="hr"></div>
@@ -75,9 +87,9 @@
           <p class="small">Met een spaarrente calculator schat je hoeveel je spaargeld kan groeien bij een vaste rente en vaste inleg. Je ziet het eindbedrag, de totale inleg en het rente-effect.</p>
 <p class="small">In de praktijk kan de rente wijzigen en kunnen voorwaarden of kosten het resultaat beïnvloeden. Gebruik deze tool als indicatie en controleer belangrijke bedragen via officiële bronnen.</p>
 
-                    <p class="small">Wanneer je meerdere scenario’s vergelijkt, wijzig je steeds één variabele (bijvoorbeeld rente of looptijd). Zo zie je direct welke factor het meeste impact heeft.</p>
+                    <p class="small">Wanneer je meerdere scenario's vergelijkt, wijzig je steeds één variabele (bijvoorbeeld rente of looptijd). Zo zie je direct welke factor het meeste impact heeft.</p>
           <p class="small">Deze calculator houdt geen rekening met persoonlijke omstandigheden, uitzonderingen of actuele productvoorwaarden. Voor beslissingen met impact: check je bank/aanbieder of officiële instanties.</p>
-          <p class="small">Wil je sneller vinden wat je zoekt? Bekijk ook de ‘Related calculators’ onderaan voor vergelijkbare rekenhulpen.</p>
+          <p class="small">Wil je sneller vinden wat je zoekt? Bekijk ook de ‘Related calculators' onderaan voor vergelijkbare rekenhulpen.</p>
 <div class="hr"></div>
           <h2 style="padding:0; border:0; margin:0 0 6px; font-size:14px;">Voorbeelden</h2>
           <ul class="small">
@@ -87,7 +99,7 @@
             <li><a href="budget-planner-calculator.html">Budget planner (50/30/20)</a></li>
             <li><a href="huur-vs-koop-calculator.html">Huur vs koop calculator</a></li>
             <li><a href="auto-maandkosten-calculator.html">Auto maandkosten calculator</a></li>
-          <li>Geen maandinleg? Zet “Maandelijkse inleg” op €0.</li>
+          <li>Geen maandinleg? Zet "Maandelijkse inleg" op €0.</li>
         </ul>
 
           <div class="hr"></div>
@@ -196,7 +208,51 @@
   </div>
 
   <script src="../assets/script.js"></script>
-  <script>
+  
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Houdt dit rekening met belasting (box 3) of kosten?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nee. Dit is een indicatieve berekening zonder belastingen/kosten."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wordt rente per maand of per jaar berekend?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We rekenen met maandrente op basis van het jaarlijkse percentage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kan ik negatieve rente invullen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Deze MVP gaat uit van 0% of hoger. Je kunt dit uitbreiden indien nodig."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Spaarrente calculator",
+  "url": "https://btw-rekenen.nl/calculators/spaarrente-calculator.html",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "description": "Bereken hoeveel spaarrente je ontvangt per maand en per jaar. Indicatieve berekening."
+}
+</script>
+<script>
     
 (function(){
   const form = document.getElementById("calcForm");
@@ -239,7 +295,7 @@
     document.getElementById("monthly").value = 100;
     document.getElementById("rate").value = 2.5;
     document.getElementById("months").value = 36;
-    resultText.textContent = 'Vul waarden in en klik op “Bereken”.';
+    resultText.textContent = 'Vul waarden in en klik op "Bereken".';
   });
 })();
 

@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pensioen calculator – pensioen opbouw berekenen | btw-rekenen.nl</title>
+  <meta name="description" content="Pensioen berekenen? Bereken een indicatie van je pensioenopbouw met startkapitaal, maandelijkse inleg en verwacht rendement. Gratis." />
+  <link rel="canonical" href="https://btw-rekenen.nl/calculators/pensioen-calculator.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="btw-rekenen.nl" />
+  <meta property="og:url" content="https://btw-rekenen.nl/calculators/pensioen-calculator.html" />
+  <meta property="og:title" content="Pensioen calculator – pensioen opbouw berekenen" />
+  <meta property="og:description" content="Pensioen berekenen? Bereken een indicatie van je pensioenopbouw met startkapitaal, maandelijkse inleg en verwacht rendement. Gratis." />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Pensioen calculator – pensioen opbouw berekenen" />
+  <meta name="twitter:description" content="Pensioen berekenen? Bereken een indicatie van je pensioenopbouw met startkapitaal, maandelijkse inleg en verwacht rendement. Gratis." />
+
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <div>
+        <h1>Pensioen calculator</h1>
+        <p>Pensioen berekenen: schat je eindkapitaal op basis van startkapitaal, maandinleg, jaren en rendement. Indicatief.</p>
+        <div class="nav" style="margin-top:10px;">
+          <span class="badge">Zoekintentie: <strong>"pensioen berekenen"</strong></span>
+          <span class="badge">Valuta: <strong>EUR</strong></span>
+        </div>
+      </div>
+      <div class="nav">
+        <a class="badge" href="../index.html">Home</a>
+        <a class="badge" href="../disclaimer.html">Disclaimer</a>
+        <a class="badge" href="../cookie-policy.html">Cookie policy</a>
+        <a class="badge" href="#" role="button" data-action="open-consent">Cookie voorkeuren</a>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h2>Calculator <span class="badge">MVP</span></h2>
+        <div class="content">
+          <form id="calcForm" novalidate>
+            <div class="row">
+              <div>
+                <label for="start">Startkapitaal (€)</label>
+                <input id="start" type="number" min="0" step="100" value="10000" />
+              </div>
+              <div>
+                <label for="monthly">Inleg per maand (€)</label>
+                <input id="monthly" type="number" min="0" step="10" value="200" />
+              </div>
+            </div>
+            <div class="row">
+              <div>
+                <label for="years">Aantal jaren</label>
+                <input id="years" type="number" min="1" step="1" value="25" />
+              </div>
+              <div>
+                <label for="rate">Rendement per jaar (%)</label>
+                <input id="rate" type="number" min="0" step="0.1" value="5" />
+              </div>
+            </div>
+            <div class="row">
+              <div>
+                <label for="round">Afronden (decimalen)</label>
+                <select id="round">
+                  <option value="2" selected>2</option>
+                  <option value="0">0</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+              <div>
+                <label for="contrib">Toon totale inleg</label>
+                <select id="contrib">
+                  <option value="yes" selected>Ja</option>
+                  <option value="no">Nee</option>
+                </select>
+              </div>
+            </div>
+            <div class="actions">
+              <button class="primary" type="submit">Bereken</button>
+              <button type="button" id="resetBtn">Reset</button>
+            </div>
+          </form>
+
+          <div class="result" id="result" aria-live="polite">
+            <strong>Resultaat</strong>
+            <div class="muted" id="resultText">Vul waarden in en klik op "Bereken".</div>
+          </div>
+
+          <div class="hr"></div>
+          <p class="small">Eindkapitaal = groei over tijd met maandelijkse inleg en rendement. Indicatief; rendement is nooit gegarandeerd.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Uitleg</h2>
+        <div class="content">
+          <p class="small">Met deze pensioen calculator maak je een indicatie van je pensioenopbouw. Je vult startkapitaal, maandelijkse inleg, looptijd en rendement in.</p>
+          <p class="small">De uitkomst is gevoelig voor rendement en tijd. Gebruik de tool vooral om scenario&#x27;s te vergelijken (meer inleg of langere looptijd).</p>
+          <p class="small">Rendement is niet gegarandeerd en kosten/risico&#x27;s zijn niet meegenomen. Gebruik dit als indicatie en check je pensioenaanbieder voor details.</p>
+          <div class="hr"></div>
+
+          <h3 class="small" style="margin:0 0 6px;">Voorbeelden</h3>
+          <ul class="small">
+            <li>Start €10.000, €200 p/m, 25 jaar, 5% → eindkapitaal indicatie kan richting €130k–€150k.</li>
+            <li>Start €0, €300 p/m, 30 jaar, 5% → eindkapitaal indicatie kan richting €250k+.</li>
+          </ul>
+
+          <div class="hr"></div>
+          <h3 class="small" style="margin:0 0 6px;">Gerelateerde calculators</h3>
+          <ul class="small">
+            <li><a href="spaardoel-calculator.html">Spaardoel calculator</a></li>
+            <li><a href="samengestelde-rente-calculator.html">Samengestelde rente calculator</a></li>
+            <li><a href="spaarrente-calculator.html">Spaarrente calculator</a></li>
+            <li><a href="inflatie-calculator.html">Inflatie calculator</a></li>
+            <li><a href="noodbuffer-calculator.html">Noodbuffer calculator</a></li>
+          </ul>
+
+          <div class="hr"></div>
+          <div class="faq">
+            <h3 class="small" style="margin:0 0 6px;">FAQ</h3>
+            <details>
+              <summary>Waarom is dit een indicatie?</summary>
+              <div class="small" style="margin-top:8px;">Kosten, inflatie, fiscale regels en echte rendementen verschillen per product.</div>
+            </details>
+            <details>
+              <summary>Welke rente/return kies ik?</summary>
+              <div class="small" style="margin-top:8px;">Gebruik een conservatief scenario (bijv. 3–5%) en vergelijk meerdere opties.</div>
+            </details>
+            <details>
+              <summary>Kan ik ook zonder startkapitaal?</summary>
+              <div class="small" style="margin-top:8px;">Ja, zet startkapitaal op 0 en reken alleen met maandelijkse inleg.</div>
+            </details>
+          </div>
+
+          <div class="hr"></div>
+          <p class="small"><strong>Related calculators</strong></p>
+          <ul class="small">
+            <li><a href="budget-planner-calculator.html">Budget planner (50/30/20)</a></li>
+            <li><a href="lening-maandlast-calculator.html">Lening maandlast calculator</a></li>
+            <li><a href="huur-vs-koop-calculator.html">Huur vs koop calculator</a></li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="hr"></div>
+    <div class="footer">
+      <div class="nav" style="justify-content:flex-start;">
+        <a class="badge" href="../about.html">Over</a>
+        <a class="badge" href="../privacy.html">Privacy</a>
+        <a class="badge" href="../cookie-policy.html">Cookie policy</a>
+        <a class="badge" href="../terms.html">Voorwaarden</a>
+        <a class="badge" href="../contact.html">Contact</a>
+        <a class="badge" href="#" role="button" data-action="open-consent">Cookie voorkeuren</a>
+      </div>
+      <div style="margin-top:10px;">
+        <strong>Geen financieel advies.</strong> Indicatieve rekenhulp. Contact: <strong>info@techuis.nl</strong>.
+      </div>
+    </div>
+  </div>
+  <!-- Consent modal shared component -->
+  <div class="consent-modal" role="dialog" aria-label="Cookie voorkeuren">
+    <div class="consent-card" role="document">
+      <div class="consent-head">
+        <div>
+          <h3>Cookie voorkeuren</h3>
+          <p>We gebruiken noodzakelijke opslag voor basisfunctionaliteit. Analytics en advertenties zijn optioneel.</p>
+          <div class="linkrow">
+            <a href="../privacy.html">Privacy</a>
+            <a href="../cookie-policy.html">Cookie policy</a>
+          </div>
+        </div>
+        <div class="nav">
+          <span class="badge">EU</span>
+        </div>
+      </div>
+      <div class="consent-body">
+        <div class="consent-grid">
+          <div class="consent-item">
+            <h4>Noodzakelijk</h4>
+            <p>Vereist om de site te laten werken en je keuze te onthouden.</p>
+            <div class="switch">
+              <label>Altijd aan</label>
+              <div class="toggle disabled"><span class="knob" style="transform:translateX(20px); background: rgba(61,220,151,.95)"></span></div>
+            </div>
+          </div>
+          <div class="consent-item">
+            <h4>Analytics</h4>
+            <p>Helpt ons begrijpen hoe de site wordt gebruikt (optioneel).</p>
+            <div class="switch">
+              <label for="consentAnalytics">Toestaan</label>
+              <div class="toggle">
+                <input id="consentAnalytics" type="checkbox" />
+                <span class="knob"></span>
+              </div>
+            </div>
+          </div>
+          <div class="consent-item">
+            <h4>Advertenties</h4>
+            <p>Toon advertenties (bijv. Google AdSense). Kan cookies gebruiken (optioneel).</p>
+            <div class="switch">
+              <label for="consentAds">Toestaan</label>
+              <div class="toggle">
+                <input id="consentAds" type="checkbox" />
+                <span class="knob"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="consent-foot">
+        <button type="button" data-action="reject-all">Weigeren</button>
+        <button type="button" data-action="accept-all" class="primary">Alles accepteren</button>
+        <button type="button" data-action="save">Opslaan</button>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="../assets/script.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Waarom is dit een indicatie?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kosten, inflatie, fiscale regels en echte rendementen verschillen per product."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Welke rente/return kies ik?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gebruik een conservatief scenario (bijv. 3–5%) en vergelijk meerdere opties."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kan ik ook zonder startkapitaal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, zet startkapitaal op 0 en reken alleen met maandelijkse inleg."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Pensioen calculator",
+  "url": "https://btw-rekenen.nl/calculators/pensioen-calculator.html",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "description": "Pensioen berekenen? Bereken een indicatie van je pensioenopbouw met startkapitaal, maandelijkse inleg en verwacht rendement. Gratis."
+}
+</script>
+  <script>
+
+(function(){
+  const form = document.getElementById("calcForm");
+  const resetBtn = document.getElementById("resetBtn");
+  const resultText = document.getElementById("resultText");
+
+  function num(id){
+    const v = parseFloat(document.getElementById(id).value);
+    return Number.isFinite(v) ? v : 0;
+  }
+  function str(id){ return document.getElementById(id).value; }
+  function roundTo(n, decimals){
+    const d = Math.max(0, parseInt(decimals, 10) || 0);
+    const factor = Math.pow(10, d);
+    return Math.round(n * factor) / factor;
+  }
+  const eur = (window.FC && typeof window.FC.formatEUR === "function")
+    ? window.FC.formatEUR
+    : (x) => `€${Number(x).toFixed(2)}`;
+
+  function futureValue(start, monthly, annualRate, years){
+    const n = Math.max(1, years) * 12;
+    const r = Math.max(0, annualRate) / 100 / 12;
+    let fv = Math.max(0, start);
+    for(let i=0;i<n;i++){
+      fv = fv * (1 + r) + Math.max(0, monthly);
+    }
+    return { fv, months:n };
+  }
+
+  function calc(start, monthly, annualRate, years){
+    const res = futureValue(start, monthly, annualRate, years);
+    const totalInleg = Math.max(0, start) + Math.max(0, monthly) * res.months;
+    return { eind: res.fv, totalInleg, years:Math.max(1, years) };
+  }
+
+  function render(res, decimals){
+    const eind = roundTo(res.eind, decimals);
+    const show = str("contrib")==="yes";
+    const inleg = roundTo(res.totalInleg, decimals);
+    const winst = roundTo(res.eind - res.totalInleg, decimals);
+
+    resultText.innerHTML = `
+      Verwacht eindkapitaal (indicatie): <strong>${eur(eind)}</strong>
+      ${show ? `<div class="hr"></div>Totale inleg: <strong>${eur(inleg)}</strong><br/>Groei (indicatie): <strong>${eur(winst)}</strong>` : ``}
+    `;
+  }
+
+  form.addEventListener("submit",(e)=>{
+    e.preventDefault();
+    const decimals = str("round");
+    render(calc(num("start"), num("monthly"), num("rate"), num("years")), decimals);
+  });
+
+  resetBtn.addEventListener("click",()=>{
+    document.getElementById("start").value = 10000;
+    document.getElementById("monthly").value = 200;
+    document.getElementById("years").value = 25;
+    document.getElementById("rate").value = 5;
+    document.getElementById("round").value = "2";
+    document.getElementById("contrib").value = "yes";
+    resultText.textContent = 'Vul waarden in en klik op "Bereken".';
+  });
+
+})();
+
+  </script>
+</body>
+</html>

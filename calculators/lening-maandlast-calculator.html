@@ -5,7 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Lening maandlast calculator (annuïteit)</title>
   <meta name="description" content="Bereken je maandlasten bij een lening met rente en looptijd." />
-  <link rel="stylesheet" href="../assets/style.css" />
+  
+  <link rel="canonical" href="https://btw-rekenen.nl/calculators/lening-maandlast-calculator.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="btw-rekenen.nl" />
+  <meta property="og:url" content="https://btw-rekenen.nl/calculators/lening-maandlast-calculator.html" />
+  <meta property="og:title" content="Lening maandlast calculator (annuïteit)" />
+  <meta property="og:description" content="Bereken je maandlasten bij een lening met rente en looptijd." />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Lening maandlast calculator (annuïteit)" />
+  <meta name="twitter:description" content="Bereken je maandlasten bij een lening met rente en looptijd." />
+<link rel="stylesheet" href="../assets/style.css" />
 </head>
 <body>
   <div class="container">
@@ -14,7 +26,7 @@
         <h1>Lening maandlast calculator</h1>
         <p>Lening maandlast calculator: Bereken je maandlast voor een annuïtaire lening op basis van bedrag, rente en looptijd. Indicatief en geen financieel advies.</p>
         <div style="margin-top:10px" class="nav">
-          <span class="badge">Zoekintentie: <strong>“lening maandlast calculator”</strong></span>
+          <span class="badge">Zoekintentie: <strong>"lening maandlast calculator"</strong></span>
           <span class="badge">Valuta: <strong>EUR</strong></span>
         </div>
       </div>
@@ -61,7 +73,7 @@
 
           <div class="result" id="result" aria-live="polite">
             <strong>Resultaat</strong>
-            <div class="muted" id="resultText">Vul waarden in en klik op “Bereken”.</div>
+            <div class="muted" id="resultText">Vul waarden in en klik op "Bereken".</div>
           </div>
 
           <div class="hr"></div>
@@ -70,14 +82,14 @@
       </div>
 
       <div class="card">
-        <h2>Uitleg</h2>
+        <h2>Uitleg <span class="badge">300–500 woorden</span></h2>
         <div class="content">
           <p class="small">Met deze calculator krijg je snel inzicht in de geschatte maandlast bij een annuïtaire lening, inclusief een indicatie van de totale rente.</p>
 <p class="small">Werkelijke kosten kunnen afwijken door afsluitkosten, variabele rente, extra aflossen en voorwaarden. Gebruik de uitkomst als indicatie.</p>
 
-                    <p class="small">Wanneer je meerdere scenario’s vergelijkt, wijzig je steeds één variabele (bijvoorbeeld rente of looptijd). Zo zie je direct welke factor het meeste impact heeft.</p>
+                    <p class="small">Wanneer je meerdere scenario's vergelijkt, wijzig je steeds één variabele (bijvoorbeeld rente of looptijd). Zo zie je direct welke factor het meeste impact heeft.</p>
           <p class="small">Deze calculator houdt geen rekening met persoonlijke omstandigheden, uitzonderingen of actuele productvoorwaarden. Voor beslissingen met impact: check je bank/aanbieder of officiële instanties.</p>
-          <p class="small">Wil je sneller vinden wat je zoekt? Bekijk ook de ‘Related calculators’ onderaan voor vergelijkbare rekenhulpen.</p>
+          <p class="small">Wil je sneller vinden wat je zoekt? Bekijk ook de ‘Related calculators' onderaan voor vergelijkbare rekenhulpen.</p>
 <div class="hr"></div>
           <h2 style="padding:0; border:0; margin:0 0 6px; font-size:14px;">Voorbeelden</h2>
           <ul class="small">
@@ -87,7 +99,7 @@
             <li><a href="budget-planner-calculator.html">Budget planner (50/30/20)</a></li>
             <li><a href="huur-vs-koop-calculator.html">Huur vs koop calculator</a></li>
             <li><a href="auto-maandkosten-calculator.html">Auto maandkosten calculator</a></li>
-          <li>Vul eenmalige kosten in om ‘totaal incl. kosten’ te zien.</li>
+          <li>Vul eenmalige kosten in om ‘totaal incl. kosten' te zien.</li>
         </ul>
 
           <div class="hr"></div>
@@ -196,7 +208,51 @@
   </div>
 
   <script src="../assets/script.js"></script>
-  <script>
+  
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is dit hetzelfde als een hypotheek?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Het rekenprincipe kan hetzelfde zijn, maar hypotheken hebben extra factoren."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wat als rente 0% is?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dan is de maandlast simpelweg leningbedrag / maanden."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Houdt dit rekening met extra aflossingen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Niet in deze MVP. Dat kun je later toevoegen."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Lening maandlast calculator",
+  "url": "https://btw-rekenen.nl/calculators/lening-maandlast-calculator.html",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "description": "Bereken je maandlasten bij een lening met rente en looptijd."
+}
+</script>
+<script>
     
 (function(){
   const form = document.getElementById("calcForm");
@@ -240,7 +296,7 @@
     document.getElementById("apr").value = 6;
     document.getElementById("term").value = 48;
     document.getElementById("fees").value = 0;
-    resultText.textContent = 'Vul waarden in en klik op “Bereken”.';
+    resultText.textContent = 'Vul waarden in en klik op "Bereken".';
   });
 })();
 

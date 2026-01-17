@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AdSense setup — Finance Calculators</title>
+  <meta name="description" content="Korte instructies om AdSense en analytics consent-gated toe te voegen." />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div>
+        <h1>AdSense / Analytics setup (consent-gated)</h1>
+        <p>
+          Dit document laat zien hoe je scripts toevoegt die pas laden na toestemming. Dit helpt bij EU-compliance.
+        </p>
+        <div style="margin-top:10px" class="nav">
+          <a class="badge" href="index.html">Home</a>
+        <a class="badge" href="about.html">Over</a>
+        <a class="badge" href="terms.html">Voorwaarden</a>
+          <a class="badge" href="cookie-policy.html">Cookie policy</a>
+          <a class="badge" href="#" data-action="open-consent">Cookie voorkeuren</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px;">
+      <h2>1. Waar voeg je scripts toe? <span class="badge">Aanrader</span></h2>
+      <div class="content">
+        <p class="small">
+          Plaats optionele scripts in de <span class="kbd">&lt;head&gt;</span> of net voor <span class="kbd">&lt;/body&gt;</span> op elke pagina.
+          Gebruik <span class="kbd">data-consent</span> zodat ze pas na toestemming laden.
+        </p>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px;">
+      <h2>2. Google Analytics (voorbeeld) <span class="badge">analytics</span></h2>
+      <div class="content">
+        <p class="small">Vervang <span class="kbd">G-XXXX</span> door je eigen ID.</p>
+<pre class="small"><code>&lt;script data-consent="analytics" data-src="https://www.googletagmanager.com/gtag/js?id=G-XXXX"&gt;&lt;/script&gt;
+&lt;script data-consent="analytics"&gt;
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXX', { anonymize_ip: true });
+&lt;/script&gt;</code></pre>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px;">
+      <h2>3. Google AdSense (voorbeeld) <span class="badge">ads</span></h2>
+      <div class="content">
+        <p class="small">Vervang <span class="kbd">ca-pub-XXXX</span> door je publisher id.</p>
+<pre class="small"><code>&lt;script data-consent="ads"
+  data-src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXX"
+  crossorigin="anonymous"&gt;&lt;/script&gt;</code></pre>
+        <p class="small">
+          Let op: AdSense implementatie verschilt per site-opzet. Voeg daarna ad units toe volgens AdSense instructies.
+        </p>
+      </div>
+    </div>
+
+    <div class="hr"></div>
+<div class="footer">
+  <div class="nav" style="justify-content:flex-start;">
+    <a class="badge" href="about.html">Over</a>
+    <a class="badge" href="privacy.html">Privacy</a>
+    <a class="badge" href="cookie-policy.html">Cookie policy</a>
+    <a class="badge" href="terms.html">Voorwaarden</a>
+    <a class="badge" href="contact.html">Contact</a>
+    <a class="badge" href="#" data-action="open-consent">Cookie voorkeuren</a>
+  </div>
+  <div style="margin-top:10px;">
+    <strong>Geen financieel advies.</strong> Indicatieve rekenhulp. Contact: <strong>info@techuis.nl</strong>.
+  </div>
+</div>
+  </div>
+<!-- Consent modal shared component -->
+  <div class="consent-modal" role="dialog" aria-label="Cookie voorkeuren">
+    <div class="consent-card" role="document">
+      <div class="consent-head">
+        <div>
+          <h3>Cookie voorkeuren</h3>
+          <p>We gebruiken noodzakelijke opslag voor basisfunctionaliteit. Analytics en advertenties zijn optioneel.</p>
+          <div class="linkrow">
+            <a href="privacy.html">Privacy</a>
+            <a href="cookie-policy.html">Cookie policy</a>
+          </div>
+        </div>
+        <div class="nav">
+          <span class="badge">EU</span>
+        </div>
+      </div>
+      <div class="consent-body">
+        <div class="consent-grid">
+          <div class="consent-item">
+            <h4>Noodzakelijk</h4>
+            <p>Vereist om de site te laten werken en je keuze te onthouden.</p>
+            <div class="switch">
+              <label>Altijd aan</label>
+              <div class="toggle disabled"><span class="knob" style="transform:translateX(20px); background: rgba(61,220,151,.95)"></span></div>
+            </div>
+          </div>
+          <div class="consent-item">
+            <h4>Analytics</h4>
+            <p>Helpt ons begrijpen hoe de site wordt gebruikt (optioneel).</p>
+            <div class="switch">
+              <label for="consentAnalytics">Toestaan</label>
+              <div class="toggle">
+                <input id="consentAnalytics" type="checkbox" />
+                <span class="knob"></span>
+              </div>
+            </div>
+          </div>
+          <div class="consent-item">
+            <h4>Advertenties</h4>
+            <p>Toon advertenties (bijv. Google AdSense). Kan cookies gebruiken (optioneel).</p>
+            <div class="switch">
+              <label for="consentAds">Toestaan</label>
+              <div class="toggle">
+                <input id="consentAds" type="checkbox" />
+                <span class="knob"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="consent-foot">
+        <button type="button" data-action="reject-all">Weigeren</button>
+        <button type="button" data-action="accept-all" class="primary">Alles accepteren</button>
+        <button type="button" data-action="save">Opslaan</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>

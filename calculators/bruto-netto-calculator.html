@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bruto netto calculator – salaris berekenen | btw-rekenen.nl</title>
+  <meta name="description" content="Bruto netto berekenen? Reken bruto salaris om naar netto met instelbare belasting en premies. Gratis en snel (indicatie)." />
+  <link rel="canonical" href="https://btw-rekenen.nl/calculators/bruto-netto-calculator.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="btw-rekenen.nl" />
+  <meta property="og:url" content="https://btw-rekenen.nl/calculators/bruto-netto-calculator.html" />
+  <meta property="og:title" content="Bruto netto calculator – salaris berekenen" />
+  <meta property="og:description" content="Bruto netto berekenen? Reken bruto salaris om naar netto met instelbare belasting en premies. Gratis en snel (indicatie)." />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Bruto netto calculator – salaris berekenen" />
+  <meta name="twitter:description" content="Bruto netto berekenen? Reken bruto salaris om naar netto met instelbare belasting en premies. Gratis en snel (indicatie)." />
+
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <div>
+        <h1>Bruto netto calculator</h1>
+        <p>Bruto netto berekenen: reken je bruto maandloon om naar netto met instelbare belasting en premies. Indicatief en geen financieel advies.</p>
+        <div class="nav" style="margin-top:10px;">
+          <span class="badge">Zoekintentie: <strong>"bruto netto berekenen"</strong></span>
+          <span class="badge">Valuta: <strong>EUR</strong></span>
+        </div>
+      </div>
+      <div class="nav">
+        <a class="badge" href="../index.html">Home</a>
+        <a class="badge" href="../disclaimer.html">Disclaimer</a>
+        <a class="badge" href="../cookie-policy.html">Cookie policy</a>
+        <a class="badge" href="#" role="button" data-action="open-consent">Cookie voorkeuren</a>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h2>Calculator <span class="badge">MVP</span></h2>
+        <div class="content">
+          <form id="calcForm" novalidate>
+            <div class="row">
+              <div>
+                <label for="gross">Bruto per maand (€)</label>
+                <input id="gross" type="number" min="0" step="0.01" value="3500" />
+              </div>
+              <div>
+                <label for="tax">Belasting (%)</label>
+                <input id="tax" type="number" min="0" step="0.1" value="30" />
+              </div>
+            </div>
+            <div class="row">
+              <div>
+                <label for="social">Sociale premies (%)</label>
+                <input id="social" type="number" min="0" step="0.1" value="8" />
+              </div>
+              <div>
+                <label for="round">Afronden (decimalen)</label>
+                <select id="round">
+                  <option value="2" selected>2</option>
+                  <option value="0">0</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+            </div>
+            <div class="actions">
+              <button class="primary" type="submit">Bereken</button>
+              <button type="button" id="resetBtn">Reset</button>
+            </div>
+          </form>
+
+          <div class="result" id="result" aria-live="polite">
+            <strong>Resultaat</strong>
+            <div class="muted" id="resultText">Vul waarden in en klik op "Bereken".</div>
+          </div>
+
+          <div class="hr"></div>
+          <p class="small">Netto = bruto − (belasting% + premies%) × bruto. Indicatief; echte loonstrook kan afwijken.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Uitleg</h2>
+        <div class="content">
+          <p class="small">Met deze bruto netto calculator maak je een snelle indicatie van je netto salaris op basis van een bruto maandbedrag.</p>
+          <p class="small">Omdat belastingen en premies per situatie verschillen, kun je percentages zelf instellen. Zo kun je scenario&#x27;s vergelijken.</p>
+          <p class="small">Gebruik de uitkomst als rekenhulp (indicatief). Voor officiële bedragen: kijk naar je loonstrook of belastingdienst.</p>
+          <div class="hr"></div>
+
+          <h3 class="small" style="margin:0 0 6px;">Voorbeelden</h3>
+          <ul class="small">
+            <li>Bruto €3.500, belasting 30% en premies 8% → netto indicatie ≈ €2.170.</li>
+            <li>Bruto €4.000, belasting 35% en premies 8% → netto indicatie ≈ €2.280.</li>
+          </ul>
+
+          <div class="hr"></div>
+          <h3 class="small" style="margin:0 0 6px;">Gerelateerde calculators</h3>
+          <ul class="small">
+            <li><a href="uurtarief-calculator.html">Uurtarief calculator (ZZP)</a></li>
+            <li><a href="budget-planner-calculator.html">Budget planner (50/30/20)</a></li>
+            <li><a href="noodbuffer-calculator.html">Noodbuffer calculator</a></li>
+            <li><a href="lening-maandlast-calculator.html">Lening maandlast calculator</a></li>
+            <li><a href="auto-maandkosten-calculator.html">Auto maandkosten calculator</a></li>
+          </ul>
+
+          <div class="hr"></div>
+          <div class="faq">
+            <h3 class="small" style="margin:0 0 6px;">FAQ</h3>
+            <details>
+              <summary>Waarom is dit een indicatie?</summary>
+              <div class="small" style="margin-top:8px;">Werkelijke inhoudingen hangen af van schijven, heffingskortingen, pensioen en sector.</div>
+            </details>
+            <details>
+              <summary>Welke periode gebruik ik?</summary>
+              <div class="small" style="margin-top:8px;">De calculator rekent met bruto per maand. Voor jaarbedragen deel je door 12.</div>
+            </details>
+            <details>
+              <summary>Kan ik premies op 0 zetten?</summary>
+              <div class="small" style="margin-top:8px;">Ja, als je alleen belasting wilt simuleren zet je premies op 0%.</div>
+            </details>
+          </div>
+
+          <div class="hr"></div>
+          <p class="small"><strong>Related calculators</strong></p>
+          <ul class="small">
+            <li><a href="inflatie-calculator.html">Inflatie calculator</a></li>
+            <li><a href="spaarrente-calculator.html">Spaarrente calculator</a></li>
+            <li><a href="spaardoel-calculator.html">Spaardoel calculator</a></li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="hr"></div>
+    <div class="footer">
+      <div class="nav" style="justify-content:flex-start;">
+        <a class="badge" href="../about.html">Over</a>
+        <a class="badge" href="../privacy.html">Privacy</a>
+        <a class="badge" href="../cookie-policy.html">Cookie policy</a>
+        <a class="badge" href="../terms.html">Voorwaarden</a>
+        <a class="badge" href="../contact.html">Contact</a>
+        <a class="badge" href="#" role="button" data-action="open-consent">Cookie voorkeuren</a>
+      </div>
+      <div style="margin-top:10px;">
+        <strong>Geen financieel advies.</strong> Indicatieve rekenhulp. Contact: <strong>info@techuis.nl</strong>.
+      </div>
+    </div>
+  </div>
+  <!-- Consent modal shared component -->
+  <div class="consent-modal" role="dialog" aria-label="Cookie voorkeuren">
+    <div class="consent-card" role="document">
+      <div class="consent-head">
+        <div>
+          <h3>Cookie voorkeuren</h3>
+          <p>We gebruiken noodzakelijke opslag voor basisfunctionaliteit. Analytics en advertenties zijn optioneel.</p>
+          <div class="linkrow">
+            <a href="../privacy.html">Privacy</a>
+            <a href="../cookie-policy.html">Cookie policy</a>
+          </div>
+        </div>
+        <div class="nav">
+          <span class="badge">EU</span>
+        </div>
+      </div>
+      <div class="consent-body">
+        <div class="consent-grid">
+          <div class="consent-item">
+            <h4>Noodzakelijk</h4>
+            <p>Vereist om de site te laten werken en je keuze te onthouden.</p>
+            <div class="switch">
+              <label>Altijd aan</label>
+              <div class="toggle disabled"><span class="knob" style="transform:translateX(20px); background: rgba(61,220,151,.95)"></span></div>
+            </div>
+          </div>
+          <div class="consent-item">
+            <h4>Analytics</h4>
+            <p>Helpt ons begrijpen hoe de site wordt gebruikt (optioneel).</p>
+            <div class="switch">
+              <label for="consentAnalytics">Toestaan</label>
+              <div class="toggle">
+                <input id="consentAnalytics" type="checkbox" />
+                <span class="knob"></span>
+              </div>
+            </div>
+          </div>
+          <div class="consent-item">
+            <h4>Advertenties</h4>
+            <p>Toon advertenties (bijv. Google AdSense). Kan cookies gebruiken (optioneel).</p>
+            <div class="switch">
+              <label for="consentAds">Toestaan</label>
+              <div class="toggle">
+                <input id="consentAds" type="checkbox" />
+                <span class="knob"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="consent-foot">
+        <button type="button" data-action="reject-all">Weigeren</button>
+        <button type="button" data-action="accept-all" class="primary">Alles accepteren</button>
+        <button type="button" data-action="save">Opslaan</button>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="../assets/script.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Waarom is dit een indicatie?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Werkelijke inhoudingen hangen af van schijven, heffingskortingen, pensioen en sector."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Welke periode gebruik ik?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "De calculator rekent met bruto per maand. Voor jaarbedragen deel je door 12."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kan ik premies op 0 zetten?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, als je alleen belasting wilt simuleren zet je premies op 0%."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Bruto netto calculator",
+  "url": "https://btw-rekenen.nl/calculators/bruto-netto-calculator.html",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "description": "Bruto netto berekenen? Reken bruto salaris om naar netto met instelbare belasting en premies. Gratis en snel (indicatie)."
+}
+</script>
+  <script>
+
+(function(){
+  const form = document.getElementById("calcForm");
+  const resetBtn = document.getElementById("resetBtn");
+  const resultText = document.getElementById("resultText");
+
+  function num(id){
+    const v = parseFloat(document.getElementById(id).value);
+    return Number.isFinite(v) ? v : 0;
+  }
+  function str(id){ return document.getElementById(id).value; }
+  function roundTo(n, decimals){
+    const d = Math.max(0, parseInt(decimals, 10) || 0);
+    const factor = Math.pow(10, d);
+    return Math.round(n * factor) / factor;
+  }
+  const eur = (window.FC && typeof window.FC.formatEUR === "function")
+    ? window.FC.formatEUR
+    : (x) => `€${Number(x).toFixed(2)}`;
+
+  function calc(gross, taxPct, socialPct){
+    const tax = Math.max(0, taxPct) / 100;
+    const social = Math.max(0, socialPct) / 100;
+    const deductions = gross * (tax + social);
+    const net = gross - deductions;
+    return { gross, taxAmount: gross*tax, socialAmount: gross*social, net };
+  }
+
+  function render(res, decimals){
+    const g = roundTo(res.gross, decimals);
+    const t = roundTo(res.taxAmount, decimals);
+    const s = roundTo(res.socialAmount, decimals);
+    const n = roundTo(res.net, decimals);
+    resultText.innerHTML = `
+      Bruto: <strong>${eur(g)}</strong><br/>
+      Belasting: <strong>${eur(t)}</strong><br/>
+      Premies: <strong>${eur(s)}</strong><br/>
+      Netto (indicatie): <strong>${eur(n)}</strong>
+    `;
+  }
+
+  form.addEventListener("submit",(e)=>{
+    e.preventDefault();
+    const decimals = str("round");
+    render(calc(num("gross"), num("tax"), num("social")), decimals);
+  });
+
+  resetBtn.addEventListener("click",()=>{
+    document.getElementById("gross").value = 3500;
+    document.getElementById("tax").value = 30;
+    document.getElementById("social").value = 8;
+    document.getElementById("round").value = "2";
+    resultText.textContent = 'Vul waarden in en klik op "Bereken".';
+  });
+
+})();
+
+  </script>
+</body>
+</html>

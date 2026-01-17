@@ -3,9 +3,21 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BTW berekenen – gratis online BTW calculator</title>
-  <meta name="description" content="Bereken eenvoudig BTW, rente en spaardoelen met gratis online calculators." />
-  <link rel="stylesheet" href="../assets/style.css" />
+  <title>BTW calculator – van exclusief naar inclusief</title>
+  <meta name="description" content="Reken BTW snel om van exclusief naar inclusief en andersom. Kies zelf het percentage." />
+  
+  <link rel="canonical" href="https://btw-rekenen.nl/calculators/btw-calculator.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="btw-rekenen.nl" />
+  <meta property="og:url" content="https://btw-rekenen.nl/calculators/btw-calculator.html" />
+  <meta property="og:title" content="BTW calculator – van exclusief naar inclusief" />
+  <meta property="og:description" content="Reken BTW snel om van exclusief naar inclusief en andersom. Kies zelf het percentage." />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="BTW calculator – van exclusief naar inclusief" />
+  <meta name="twitter:description" content="Reken BTW snel om van exclusief naar inclusief en andersom. Kies zelf het percentage." />
+<link rel="stylesheet" href="../assets/style.css" />
 </head>
 <body>
   <div class="container">
@@ -14,7 +26,7 @@
         <h1>BTW calculator</h1>
         <p>BTW calculator: Bereken bedragen exclusief/inclusief BTW met instelbaar BTW-percentage. Indicatief en geen financieel advies.</p>
         <div style="margin-top:10px" class="nav">
-          <span class="badge">Zoekintentie: <strong>“btw calculator”</strong></span>
+          <span class="badge">Zoekintentie: <strong>"btw calculator"</strong></span>
           <span class="badge">Valuta: <strong>EUR</strong></span>
         </div>
       </div>
@@ -68,7 +80,7 @@
 
           <div class="result" id="result" aria-live="polite">
             <strong>Resultaat</strong>
-            <div class="muted" id="resultText">Vul waarden in en klik op “Bereken”.</div>
+            <div class="muted" id="resultText">Vul waarden in en klik op "Bereken".</div>
           </div>
 
           <div class="hr"></div>
@@ -77,14 +89,14 @@
       </div>
 
       <div class="card">
-        <h2>Uitleg</h2>
+        <h2>Uitleg <span class="badge">300–500 woorden</span></h2>
         <div class="content">
           <p class="small">Met een BTW calculator bereken je snel hoeveel BTW in een bedrag zit of wat het bedrag inclusief BTW is. Handig voor offertes en controle.</p>
 <p class="small">BTW-tarieven kunnen verschillen per situatie. Daarom stel je het percentage zelf in. Gebruik de uitkomst als indicatie en controleer je administratie.</p>
 
-                    <p class="small">Wanneer je meerdere scenario’s vergelijkt, wijzig je steeds één variabele (bijvoorbeeld rente of looptijd). Zo zie je direct welke factor het meeste impact heeft.</p>
+                    <p class="small">Wanneer je meerdere scenario's vergelijkt, wijzig je steeds één variabele (bijvoorbeeld rente of looptijd). Zo zie je direct welke factor het meeste impact heeft.</p>
           <p class="small">Deze calculator houdt geen rekening met persoonlijke omstandigheden, uitzonderingen of actuele productvoorwaarden. Voor beslissingen met impact: check je bank/aanbieder of officiële instanties.</p>
-          <p class="small">Wil je sneller vinden wat je zoekt? Bekijk ook de ‘Related calculators’ onderaan voor vergelijkbare rekenhulpen.</p>
+          <p class="small">Wil je sneller vinden wat je zoekt? Bekijk ook de ‘Related calculators' onderaan voor vergelijkbare rekenhulpen.</p>
 <div class="hr"></div>
           <h2 style="padding:0; border:0; margin:0 0 6px; font-size:14px;">Voorbeelden</h2>
           <ul class="small">
@@ -137,7 +149,7 @@
     <a class="badge" href="#" data-action="open-consent">Cookie voorkeuren</a>
   </div>
   <div style="margin-top:10px;">
-    <strong>Geen financieel advies.</strong> Indicatieve rekenhulp. Contact: <strong>vul-in@jouwdomein.nl</strong>.
+    <strong>Geen financieel advies.</strong> Indicatieve rekenhulp. Contact: <strong>info@techuis.nl</strong>.
   </div>
 </div>
   </div>
@@ -203,7 +215,51 @@
   </div>
 
   <script src="../assets/script.js"></script>
-  <script>
+  
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Waarom kan ik het percentage aanpassen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Omdat tarieven en situaties kunnen verschillen; je kiest het juiste percentage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Rondt de calculator af?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, je kunt het aantal decimalen kiezen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is dit geschikt voor aangifte?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Alleen indicatief. Gebruik officiële gegevens voor aangifte."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "BTW calculator",
+  "url": "https://btw-rekenen.nl/calculators/btw-calculator.html",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "description": "Reken BTW snel om van exclusief naar inclusief en andersom. Kies zelf het percentage."
+}
+</script>
+<script>
     
 (function(){
   const form = document.getElementById("calcForm");
@@ -255,7 +311,7 @@
     document.getElementById("vat").value = 21;
     document.getElementById("mode").value = "add";
     document.getElementById("round").value = "2";
-    resultText.textContent = 'Vul waarden in en klik op “Bereken”.';
+    resultText.textContent = 'Vul waarden in en klik op "Bereken".';
   });
 })();
 
