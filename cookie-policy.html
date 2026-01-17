@@ -1,13 +1,27 @@
 <!doctype html>
 <html lang="nl">
+
 <head>
   <meta charset="utf-8" />
+  <meta http-equiv="Content-Security-Policy" content="
+default-src 'self';
+script-src 'self';
+style-src 'self' 'unsafe-inline';
+img-src 'self' data:;
+font-src 'self';
+connect-src 'self';
+frame-ancestors 'none';
+base-uri 'self';
+form-action 'self';
+">
+
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Cookie Policy — Finance Calculators</title>
   <meta name="description" content="Cookie policy voor Finance Calculators." />
   <link rel="stylesheet" href="assets/style.css" />
-  <link rel="canonical" href="https://btw-rekenen.nl/cookie-policy.html" />  
+  <link rel="canonical" href="https://btw-rekenen.nl/cookie-policy.html" />
 </head>
+
 <body>
   <div class="container">
     <div class="header">
@@ -30,7 +44,8 @@
       <h2>1. Wat zijn cookies? <span class="badge">Basis</span></h2>
       <div class="content">
         <p class="small">
-          Cookies zijn kleine tekstbestanden die op je apparaat kunnen worden opgeslagen. Ze helpen om een website goed te laten werken
+          Cookies zijn kleine tekstbestanden die op je apparaat kunnen worden opgeslagen. Ze helpen om een website goed
+          te laten werken
           en kunnen worden gebruikt voor metingen (analytics) of advertenties.
         </p>
       </div>
@@ -39,9 +54,12 @@
     <div class="card" style="margin-top:14px;">
       <h2>2. Welke categorieën gebruiken we? <span class="badge">EU</span></h2>
       <div class="content">
-        <p class="small"><strong>Noodzakelijk</strong>: nodig om de website te laten werken en om je cookievoorkeur te onthouden.</p>
-        <p class="small"><strong>Analytics (optioneel)</strong>: meten van gebruik (bijv. paginaweergaven) om de site te verbeteren.</p>
-        <p class="small"><strong>Ads (optioneel)</strong>: tonen van advertenties (bijv. Google AdSense) en mogelijke personalisatie.</p>
+        <p class="small"><strong>Noodzakelijk</strong>: nodig om de website te laten werken en om je cookievoorkeur te
+          onthouden.</p>
+        <p class="small"><strong>Analytics (optioneel)</strong>: meten van gebruik (bijv. paginaweergaven) om de site te
+          verbeteren.</p>
+        <p class="small"><strong>Ads (optioneel)</strong>: tonen van advertenties (bijv. Google AdSense) en mogelijke
+          personalisatie.</p>
       </div>
     </div>
 
@@ -49,28 +67,29 @@
       <h2>3. Toestemming beheren <span class="badge">Controle</span></h2>
       <div class="content">
         <p class="small">
-          Je kunt je voorkeuren op elk moment aanpassen via “Cookie voorkeuren”. We slaan je keuze lokaal op in je browser.
+          Je kunt je voorkeuren op elk moment aanpassen via “Cookie voorkeuren”. We slaan je keuze lokaal op in je
+          browser.
         </p>
         <p class="small"><a href="#" data-action="open-consent">Cookie voorkeuren openen</a></p>
       </div>
     </div>
 
     <div class="hr"></div>
-<div class="footer">
-  <div class="nav" style="justify-content:flex-start;">
-    <a class="badge" href="about.html">Over</a>
-    <a class="badge" href="privacy.html">Privacy</a>
-    <a class="badge" href="cookie-policy.html">Cookie policy</a>
-    <a class="badge" href="terms.html">Voorwaarden</a>
-    <a class="badge" href="contact.html">Contact</a>
-    <a class="badge" href="#" data-action="open-consent">Cookie voorkeuren</a>
+    <div class="footer">
+      <div class="nav" style="justify-content:flex-start;">
+        <a class="badge" href="about.html">Over</a>
+        <a class="badge" href="privacy.html">Privacy</a>
+        <a class="badge" href="cookie-policy.html">Cookie policy</a>
+        <a class="badge" href="terms.html">Voorwaarden</a>
+        <a class="badge" href="contact.html">Contact</a>
+        <a class="badge" href="#" data-action="open-consent">Cookie voorkeuren</a>
+      </div>
+      <div style="margin-top:10px;">
+        <strong>Geen financieel advies.</strong> Indicatieve rekenhulp. Contact: <strong>info@techuis.nl</strong>.
+      </div>
+    </div>
   </div>
-  <div style="margin-top:10px;">
-    <strong>Geen financieel advies.</strong> Indicatieve rekenhulp. Contact: <strong>info@techuis.nl</strong>.
-  </div>
-</div>
-  </div>
-<!-- Consent modal shared component -->
+  <!-- Consent modal shared component -->
   <div class="consent-modal" role="dialog" aria-label="Cookie voorkeuren">
     <div class="consent-card" role="document">
       <div class="consent-head">
@@ -93,7 +112,8 @@
             <p>Vereist om de site te laten werken en je keuze te onthouden.</p>
             <div class="switch">
               <label>Altijd aan</label>
-              <div class="toggle disabled"><span class="knob" style="transform:translateX(20px); background: rgba(61,220,151,.95)"></span></div>
+              <div class="toggle disabled"><span class="knob"
+                  style="transform:translateX(20px); background: rgba(61,220,151,.95)"></span></div>
             </div>
           </div>
           <div class="consent-item">
@@ -130,4 +150,5 @@
 
   <script src="assets/script.js"></script>
 </body>
+
 </html>

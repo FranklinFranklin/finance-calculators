@@ -1,24 +1,41 @@
 <!doctype html>
 <html lang="nl">
+
 <head>
   <meta charset="utf-8" />
+  <meta http-equiv="Content-Security-Policy" content="
+default-src 'self';
+script-src 'self';
+style-src 'self' 'unsafe-inline';
+img-src 'self' data:;
+font-src 'self';
+connect-src 'self';
+frame-ancestors 'none';
+base-uri 'self';
+form-action 'self';
+">
+
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>BTW berekenen stap voor stap | btw-rekenen.nl</title>
-  <meta name="description" content="Leer BTW berekenen en BTW terugrekenen met simpele formules, voorbeelden en praktische tips. Snel duidelijk, zonder gedoe." />
+  <meta name="description"
+    content="Leer BTW berekenen en BTW terugrekenen met simpele formules, voorbeelden en praktische tips. Snel duidelijk, zonder gedoe." />
   <link rel="canonical" href="https://btw-rekenen.nl/artikelen/btw-berekenen-stappenplan.html" />
 
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="btw-rekenen.nl" />
   <meta property="og:url" content="https://btw-rekenen.nl/artikelen/btw-berekenen-stappenplan.html" />
   <meta property="og:title" content="BTW berekenen stap voor stap | btw-rekenen.nl" />
-  <meta property="og:description" content="Leer BTW berekenen en BTW terugrekenen met simpele formules, voorbeelden en praktische tips. Snel duidelijk, zonder gedoe." />
+  <meta property="og:description"
+    content="Leer BTW berekenen en BTW terugrekenen met simpele formules, voorbeelden en praktische tips. Snel duidelijk, zonder gedoe." />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="BTW berekenen stap voor stap | btw-rekenen.nl" />
-  <meta name="twitter:description" content="Leer BTW berekenen en BTW terugrekenen met simpele formules, voorbeelden en praktische tips. Snel duidelijk, zonder gedoe." />
+  <meta name="twitter:description"
+    content="Leer BTW berekenen en BTW terugrekenen met simpele formules, voorbeelden en praktische tips. Snel duidelijk, zonder gedoe." />
 
   <link rel="stylesheet" href="../assets/style.css" />
 </head>
+
 <body>
   <div class="container">
     <div class="header">
@@ -42,25 +59,35 @@
       <div class="card">
         <h2>Artikel</h2>
         <div class="content">
-<h3 class="small" style="margin:0 0 6px;">Wat betekent BTW?</h3>
-<p class="small">BTW is belasting over de toegevoegde waarde. In Nederland zie je vaak tarieven zoals 21% en 9%, maar het juiste tarief hangt af van product, dienst en regels.</p>
-<p class="small">Op facturen en offertes kom je bedragen exclusief BTW (excl.) en inclusief BTW (incl.) tegen. Het verschil is de BTW-component.</p>
-<div class="hr"></div>
-<h3 class="small" style="margin:0 0 6px;">BTW berekenen: excl. naar incl.</h3>
-<p class="small">Als je een bedrag exclusief BTW hebt, bereken je het bedrag inclusief BTW door het BTW-bedrag erbij op te tellen.</p>
-<p class="small">Formule: BTW = excl × (percentage/100). Incl = excl + BTW. Voorbeeld: €100 excl met 21% → BTW €21 en incl €121.</p>
-<div class="hr"></div>
-<h3 class="small" style="margin:0 0 6px;">BTW terugrekenen: incl. naar excl.</h3>
-<p class="small">Als je alleen het bedrag inclusief BTW hebt, kun je de BTW eruit halen door terug te rekenen.</p>
-<p class="small">Formule: excl = incl / (1 + percentage/100). BTW = incl − excl. Voorbeeld: €121 incl met 21% → excl €100 en BTW €21.</p>
-<div class="hr"></div>
-<h3 class="small" style="margin:0 0 6px;">Veelgemaakte fouten</h3>
-<p class="small">Een veelgemaakte fout is BTW berekenen door het percentage direct van het incl-bedrag af te trekken. Dat werkt niet, omdat het percentage op de exclusieve basis hoort.</p>
-<p class="small">Let ook op afronding. Voor euro&#x27;s is 2 decimalen meestal voldoende, maar bij grotere aantallen of administratie kan afronding per regel verschillen.</p>
-<div class="hr"></div>
-<h3 class="small" style="margin:0 0 6px;">Praktische tips</h3>
-<p class="small">Kies het juiste percentage en schrijf op of je input incl. of excl. is. Als je offertes vergelijkt, houd steeds dezelfde basis aan.</p>
-<p class="small">Gebruik rekenhulpen als indicatie en controleer je administratie of officiële bronnen als je BTW moet afdragen of terugvragen.</p>
+          <h3 class="small" style="margin:0 0 6px;">Wat betekent BTW?</h3>
+          <p class="small">BTW is belasting over de toegevoegde waarde. In Nederland zie je vaak tarieven zoals 21% en
+            9%, maar het juiste tarief hangt af van product, dienst en regels.</p>
+          <p class="small">Op facturen en offertes kom je bedragen exclusief BTW (excl.) en inclusief BTW (incl.) tegen.
+            Het verschil is de BTW-component.</p>
+          <div class="hr"></div>
+          <h3 class="small" style="margin:0 0 6px;">BTW berekenen: excl. naar incl.</h3>
+          <p class="small">Als je een bedrag exclusief BTW hebt, bereken je het bedrag inclusief BTW door het BTW-bedrag
+            erbij op te tellen.</p>
+          <p class="small">Formule: BTW = excl × (percentage/100). Incl = excl + BTW. Voorbeeld: €100 excl met 21% → BTW
+            €21 en incl €121.</p>
+          <div class="hr"></div>
+          <h3 class="small" style="margin:0 0 6px;">BTW terugrekenen: incl. naar excl.</h3>
+          <p class="small">Als je alleen het bedrag inclusief BTW hebt, kun je de BTW eruit halen door terug te rekenen.
+          </p>
+          <p class="small">Formule: excl = incl / (1 + percentage/100). BTW = incl − excl. Voorbeeld: €121 incl met 21%
+            → excl €100 en BTW €21.</p>
+          <div class="hr"></div>
+          <h3 class="small" style="margin:0 0 6px;">Veelgemaakte fouten</h3>
+          <p class="small">Een veelgemaakte fout is BTW berekenen door het percentage direct van het incl-bedrag af te
+            trekken. Dat werkt niet, omdat het percentage op de exclusieve basis hoort.</p>
+          <p class="small">Let ook op afronding. Voor euro&#x27;s is 2 decimalen meestal voldoende, maar bij grotere
+            aantallen of administratie kan afronding per regel verschillen.</p>
+          <div class="hr"></div>
+          <h3 class="small" style="margin:0 0 6px;">Praktische tips</h3>
+          <p class="small">Kies het juiste percentage en schrijf op of je input incl. of excl. is. Als je offertes
+            vergelijkt, houd steeds dezelfde basis aan.</p>
+          <p class="small">Gebruik rekenhulpen als indicatie en controleer je administratie of officiële bronnen als je
+            BTW moet afdragen of terugvragen.</p>
         </div>
       </div>
 
@@ -118,7 +145,8 @@
             <p>Vereist om de site te laten werken en je keuze te onthouden.</p>
             <div class="switch">
               <label>Altijd aan</label>
-              <div class="toggle disabled"><span class="knob" style="transform:translateX(20px); background: rgba(61,220,151,.95)"></span></div>
+              <div class="toggle disabled"><span class="knob"
+                  style="transform:translateX(20px); background: rgba(61,220,151,.95)"></span></div>
             </div>
           </div>
           <div class="consent-item">
@@ -157,4 +185,5 @@
 
   <script src="../assets/script.js"></script>
 </body>
+
 </html>

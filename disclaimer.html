@@ -1,13 +1,27 @@
 <!doctype html>
 <html lang="nl">
+
 <head>
   <meta charset="utf-8" />
+  <meta http-equiv="Content-Security-Policy" content="
+default-src 'self';
+script-src 'self';
+style-src 'self' 'unsafe-inline';
+img-src 'self' data:;
+font-src 'self';
+connect-src 'self';
+frame-ancestors 'none';
+base-uri 'self';
+form-action 'self';
+">
+
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Disclaimer — Finance Calculators</title>
   <meta name="description" content="Disclaimer voor Finance Calculators." />
   <link rel="stylesheet" href="assets/style.css" />
   <link rel="canonical" href="https://btw-rekenen.nl/disclaimer.html" />
 </head>
+
 <body>
   <div class="container">
     <div class="header">
@@ -60,7 +74,8 @@
             <p>Vereist om de site te laten werken en je keuze te onthouden.</p>
             <div class="switch">
               <label>Altijd aan</label>
-              <div class="toggle disabled"><span class="knob" style="transform:translateX(20px); background: rgba(61,220,151,.95)"></span></div>
+              <div class="toggle disabled"><span class="knob"
+                  style="transform:translateX(20px); background: rgba(61,220,151,.95)"></span></div>
             </div>
           </div>
           <div class="consent-item">
@@ -97,4 +112,5 @@
 
   <script src="assets/script.js"></script>
 </body>
+
 </html>
