@@ -25,14 +25,14 @@ form-action 'self';
 
 <body>
   <script>
-    if (window.location.pathname.endsWith("index.html")) {
-      window.location.replace("https://btw-rekenen.nl/");
-    }
-  </script>
-  <script>
-window.location.replace(
- "https://btw-rekenen.nl/calculators/btw-calculator.html"
-);
+if (
+  window.location.pathname === "/" ||
+  window.location.pathname.endsWith("index.html")
+) {
+  window.location.replace(
+    "https://btw-rekenen.nl/calculators/btw-calculator.html"
+  );
+}
 </script>
   <div class="container">
     <div class="header">
