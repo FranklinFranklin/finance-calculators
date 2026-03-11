@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="nl">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="apple-touch-icon" sizes="192x192" href="/assets/images/favicon_io/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BTW calculator – van exclusief naar inclusief</title>
+  <meta name="description"
+    content="Reken BTW snel om van exclusief naar inclusief en andersom. Kies zelf het percentage." />
+
+  <link rel="canonical" href="https://btw-rekenen.nl/calculators/btw-calculator.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="btw-rekenen.nl" />
+  <meta property="og:url" content="https://btw-rekenen.nl/calculators/btw-calculator.html" />
+  <meta property="og:title" content="BTW calculator – van exclusief naar inclusief" />
+  <meta property="og:description"
+    content="Reken BTW snel om van exclusief naar inclusief en andersom. Kies zelf het percentage." />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="BTW calculator – van exclusief naar inclusief" />
+  <meta name="twitter:description" content="Reken BTW snel om van exclusief naar inclusief en andersom." />
+
+  <!-- Content Security Policy -->
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' https://pagead2.googlesyndication.com;
+    style-src 'self' 'unsafe-inline';
+    img-src 'self' data: https://tpc.googlesyndication.com https://googleads.g.doubleclick.net;
+    font-src 'self';
+    connect-src 'self' https://googleads.g.doubleclick.net;
+    frame-src https://googleads.g.doubleclick.net https://tpc.googlesyndication.com;
+    base-uri 'self';
+    form-action 'self';
+  ">
+
+  <link rel="stylesheet" href="../assets/style.css" />
+  <link rel="icon" href="/favicon.ico" />
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3569392753036431"
+    crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="header">
+      <div>
+        <h1>BTW calculator</h1>
+        <p>Bereken bedragen exclusief en inclusief BTW met instelbaar percentage.</p>
+      </div>
+      <div class="nav">
+        <a class="badge" href="../index.html">Home</a>
+        <a class="badge" href="../disclaimer.html">Disclaimer</a>
+        <a class="badge" href="../privacy.html">Privacy</a>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h2>Calculator</h2>
+        <div class="content">
+          <form id="calcForm" novalidate>
+            <div class="row">
+              <div>
+                <label for="amount">Bedrag (€)</label>
+                <input id="amount" type="number" value="100" step="0.01" min="0">
+              </div>
+              <div>
+                <label for="vat">BTW %</label>
+                <input id="vat" type="number" value="21" step="0.01" min="0">
+              </div>
+            </div>
+
+            <div class="row">
+              <div>
+                <label for="mode">Bereken</label>
+                <select id="mode">
+                  <option value="add">Excl → Incl</option>
+                  <option value="remove">Incl → Excl</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="actions">
+              <button class="primary" type="submit">Bereken</button>
+              <button type="button" id="resetBtn">Reset</button>
+            </div>
+          </form>
+
+          <div class="result" id="result" aria-live="polite">
+            <strong>Resultaat</strong>
+            <div id="resultText">Vul waarden in en klik op “Bereken”.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Uitleg</h2>
+        <div class="content">
+          <p>Deze calculator berekent hoeveel BTW in een bedrag zit of wat het bedrag inclusief BTW is.</p>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <script>
+    (function () {
+      const form = document.getElementById("calcForm");
+      const resetBtn = document.getElementById("resetBtn");
+      const resultText = document.getElementById("resultText");
+
+      function calc(amount, vatPct, mode) {
+        const rate = vatPct / 100;
+        if (mode === "add") {
+          const vat = amount * rate;
+          return { excl: amount, vat: vat, incl: amount + vat };
+        } else {
+          const excl = amount / (1 + rate);
+          return { excl: excl, vat: amount - excl, incl: amount };
+        }
+      }
+
+      form.addEventListener("submit", e => {
+        e.preventDefault();
+
+        const amount = parseFloat(document.getElementById("amount").value);
+        const vat = parseFloat(document.getElementById("vat").value);
+        const mode = document.getElementById("mode").value;
+
+        if (!Number.isFinite(amount) || !Number.isFinite(vat)) {
+          resultText.textContent = "Vul geldige getallen in.";
+          return;
+        }
+
+        const r = calc(amount, vat, mode);
+
+        resultText.innerHTML =
+          "Excl: €" + r.excl.toFixed(2) + "<br>" +
+          "BTW: €" + r.vat.toFixed(2) + "<br>" +
+          "Incl: €" + r.incl.toFixed(2);
+      });
+
+      resetBtn.addEventListener("click", () => {
+        document.getElementById("amount").value = 100;
+        document.getElementById("vat").value = 21;
+        resultText.textContent = "Vul waarden in en klik op “Bereken”.";
+      });
+    })();
+  </script>
+
+</body>
+
+</html>
