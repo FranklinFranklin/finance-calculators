@@ -3,54 +3,62 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cookie Policy — Finance Calculators</title>
-  <meta name="description" content="Cookie policy voor Finance Calculators." />
+  <title>AdSense setup — Finance Calculators</title>
+  <meta name="description" content="Korte instructies om AdSense en analytics consent-gated toe te voegen." />
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
   <div class="container">
     <div class="header">
       <div>
-        <h1>Cookie Policy</h1>
-        <p>Uitleg over cookies en toestemming (EU). Pas dit aan zodra je advertenties/analytics activeert.</p>
+        <h1>AdSense / Analytics setup (consent-gated)</h1>
+        <p>
+          Dit document laat zien hoe je scripts toevoegt die pas laden na toestemming. Dit helpt bij EU-compliance.
+        </p>
         <div style="margin-top:10px" class="nav">
-          <span class="badge">Categorieën: <strong>Noodzakelijk / Analytics / Ads</strong></span>
-        </div>
-      </div>
-      <div class="nav">
-        <a class="badge" href="index.html">Home</a>
+          <a class="badge" href="index.html">Home</a>
         <a class="badge" href="about.html">Over</a>
         <a class="badge" href="terms.html">Voorwaarden</a>
-        <a class="badge" href="#" data-action="open-consent">Cookie voorkeuren</a>
+          <a class="badge" href="cookie-policy.html">Cookie policy</a>
+          <a class="badge" href="#" data-action="open-consent">Cookie voorkeuren</a>
+        </div>
       </div>
     </div>
 
     <div class="card" style="margin-top:14px;">
-      <h2>1. Wat zijn cookies? <span class="badge">Basis</span></h2>
+      <h2>1. Waar voeg je scripts toe? <span class="badge">Aanrader</span></h2>
       <div class="content">
         <p class="small">
-          Cookies zijn kleine tekstbestanden die op je apparaat kunnen worden opgeslagen. Ze helpen om een website goed te laten werken
-          en kunnen worden gebruikt voor metingen (analytics) of advertenties.
+          Plaats optionele scripts in de <span class="kbd">&lt;head&gt;</span> of net voor <span class="kbd">&lt;/body&gt;</span> op elke pagina.
+          Gebruik <span class="kbd">data-consent</span> zodat ze pas na toestemming laden.
         </p>
       </div>
     </div>
 
     <div class="card" style="margin-top:14px;">
-      <h2>2. Welke categorieën gebruiken we? <span class="badge">EU</span></h2>
+      <h2>2. Google Analytics (voorbeeld) <span class="badge">analytics</span></h2>
       <div class="content">
-        <p class="small"><strong>Noodzakelijk</strong>: nodig om de website te laten werken en om je cookievoorkeur te onthouden.</p>
-        <p class="small"><strong>Analytics (optioneel)</strong>: meten van gebruik (bijv. paginaweergaven) om de site te verbeteren.</p>
-        <p class="small"><strong>Ads (optioneel)</strong>: tonen van advertenties (bijv. Google AdSense) en mogelijke personalisatie.</p>
+        <p class="small">Vervang <span class="kbd">G-XXXX</span> door je eigen ID.</p>
+<pre class="small"><code>&lt;script data-consent="analytics" data-src="https://www.googletagmanager.com/gtag/js?id=G-XXXX"&gt;&lt;/script&gt;
+&lt;script data-consent="analytics"&gt;
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXX', { anonymize_ip: true });
+&lt;/script&gt;</code></pre>
       </div>
     </div>
 
     <div class="card" style="margin-top:14px;">
-      <h2>3. Toestemming beheren <span class="badge">Controle</span></h2>
+      <h2>3. Google AdSense (voorbeeld) <span class="badge">ads</span></h2>
       <div class="content">
+        <p class="small">Vervang <span class="kbd">ca-pub-XXXX</span> door je publisher id.</p>
+<pre class="small"><code>&lt;script data-consent="ads"
+  data-src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXX"
+  crossorigin="anonymous"&gt;&lt;/script&gt;</code></pre>
         <p class="small">
-          Je kunt je voorkeuren op elk moment aanpassen via “Cookie voorkeuren”. We slaan je keuze lokaal op in je browser.
+          Let op: AdSense implementatie verschilt per site-opzet. Voeg daarna ad units toe volgens AdSense instructies.
         </p>
-        <p class="small"><a href="#" data-action="open-consent">Cookie voorkeuren openen</a></p>
       </div>
     </div>
 
