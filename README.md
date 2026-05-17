@@ -1,2 +1,2 @@
 # finance-calculators
-finance calculators een tool dat helpt met berekenen van hypotheek rente
+finance calculators a to help with calculating.
